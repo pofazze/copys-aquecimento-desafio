@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Copys de Aquecimento — Desafio Zero a Dez | NexFarm 3D</title>
+<meta name="description" content="Roteiros prontos de 30 segundos para cada sócio gravar e postar no grupo do WhatsApp. Aquecimento do Desafio Zero a Dez, 27-30 de abril.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --nex-blue: #0098D5;
+  --nex-cyan: #00CBF7;
+  --nex-dark: #040C22;
+  --nex-darker: #020714;
+  --nex-panel: #0a1430;
+  --nex-border: #1a2440;
+  --nex-white: #FFFFFF;
+  --nex-grey: #8A94A6;
+  --nex-grey-light: #b8c1d1;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--nex-dark);
+  color: var(--nex-white);
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .display {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+/* ============ HERO ============ */
+.hero {
+  min-height: 90vh;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(0,203,247,0.18) 0%, transparent 45%),
+    radial-gradient(circle at 85% 90%, rgba(0,152,213,0.14) 0%, transparent 50%),
+    var(--nex-dark);
+  padding: 40px 6vw 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,203,247,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,203,247,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.brand-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--nex-border);
+  position: relative;
+  z-index: 2;
+}
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+.logo span { color: var(--nex-cyan); }
+.tag-date {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--nex-grey);
+  font-weight: 500;
+}
+
+.hero-content {
+  max-width: 1000px;
+  margin-top: 8vh;
+  position: relative;
+  z-index: 2;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  background: rgba(0,203,247,0.08);
+  border: 1px solid rgba(0,203,247,0.3);
+  border-radius: 100px;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--nex-cyan);
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+.hero-badge::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--nex-cyan);
+  box-shadow: 0 0 12px var(--nex-cyan);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.hero h1 {
+  font-size: clamp(40px, 6vw, 78px);
+  line-height: 0.98;
+  margin-bottom: 24px;
+}
+.hero h1 em {
+  font-style: normal;
+  background: linear-gradient(135deg, var(--nex-cyan) 0%, var(--nex-blue) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero-sub {
+  font-size: clamp(16px, 1.8vw, 20px);
+  color: var(--nex-grey-light);
+  max-width: 720px;
+  line-height: 1.55;
+  margin-bottom: 40px;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin-top: 20px;
+}
+.stat {
+  padding: 20px 24px;
+  background: rgba(10,20,48,0.6);
+  border: 1px solid var(--nex-border);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+.stat-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--nex-cyan);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.stat-label {
+  font-size: 12px;
+  color: var(--nex-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ============ NAVIGATION ============ */
+.nav-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(4,12,34,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--nex-border);
+  padding: 16px 6vw;
+}
+.nav {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.nav::-webkit-scrollbar { display: none; }
+.nav a {
+  padding: 10px 18px;
+  border-radius: 100px;
+  color: var(--nex-grey-light);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+.nav a:hover {
+  background: rgba(0,203,247,0.08);
+  border-color: rgba(0,203,247,0.2);
+  color: var(--nex-white);
+}
+
+/* ============ INSTRUCTIONS ============ */
+.instructions {
+  padding: 60px 6vw 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.instructions h2 {
+  font-size: clamp(24px, 3vw, 32px);
+  margin-bottom: 20px;
+}
+.how-to {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.how-item {
+  padding: 24px;
+  background: var(--nex-panel);
+  border: 1px solid var(--nex-border);
+  border-radius: 12px;
+}
+.how-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--nex-cyan);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.how-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.how-desc {
+  font-size: 13px;
+  color: var(--nex-grey-light);
+  line-height: 1.5;
+}
+
+/* ============ SECTIONS ============ */
+.section {
+  padding: 80px 6vw 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  scroll-margin-top: 80px;
+}
+
+.socio-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 32px;
+  align-items: flex-start;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--nex-border);
+  margin-bottom: 48px;
+}
+.socio-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--nex-cyan), var(--nex-blue));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--nex-dark);
+  flex-shrink: 0;
+  box-shadow: 0 8px 32px rgba(0,203,247,0.2);
+}
+.socio-info h2 {
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.socio-role {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--nex-cyan);
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+.socio-bio {
+  font-size: 15px;
+  color: var(--nex-grey-light);
+  line-height: 1.6;
+  max-width: 720px;
+}
+.socio-duties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.duty {
+  padding: 6px 12px;
+  background: rgba(0,152,213,0.1);
+  border: 1px solid rgba(0,152,213,0.25);
+  border-radius: 100px;
+  font-size: 12px;
+  color: var(--nex-cyan);
+  font-weight: 500;
+}
+
+/* ============ COPY CARDS ============ */
+.copys-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 20px;
+}
+.copy-card {
+  padding: 28px;
+  background: var(--nex-panel);
+  border: 1px solid var(--nex-border);
+  border-radius: 16px;
+  position: relative;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.copy-card:hover {
+  border-color: rgba(0,203,247,0.4);
+  transform: translateY(-2px);
+}
+.copy-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.copy-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--nex-cyan);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.copy-tag {
+  font-size: 10px;
+  padding: 4px 10px;
+  background: rgba(0,203,247,0.1);
+  border: 1px solid rgba(0,203,247,0.25);
+  border-radius: 100px;
+  color: var(--nex-cyan);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.copy-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  line-height: 1.25;
+}
+.copy-script {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--nex-grey-light);
+  margin-bottom: 18px;
+}
+.copy-script strong {
+  color: var(--nex-white);
+  font-weight: 600;
+}
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: transparent;
+  border: 1px solid rgba(0,203,247,0.4);
+  border-radius: 100px;
+  color: var(--nex-cyan);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.copy-btn:hover {
+  background: rgba(0,203,247,0.1);
+  border-color: var(--nex-cyan);
+}
+.copy-btn.copied {
+  background: var(--nex-cyan);
+  color: var(--nex-dark);
+  border-color: var(--nex-cyan);
+}
+.copy-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ============ FOOTER ============ */
+.footer {
+  padding: 60px 6vw 40px;
+  border-top: 1px solid var(--nex-border);
+  background: var(--nex-darker);
+  margin-top: 80px;
+}
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer h3 {
+  font-size: clamp(24px, 3vw, 36px);
+  margin-bottom: 16px;
+}
+.footer p {
+  color: var(--nex-grey-light);
+  font-size: 15px;
+  max-width: 600px;
+  margin: 0 auto 24px;
+  line-height: 1.6;
+}
+.footer-tag {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--nex-grey);
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--nex-border);
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 720px) {
+  .socio-header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .socio-avatar {
+    width: 72px;
+    height: 72px;
+    font-size: 28px;
+  }
+  .copys-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero { padding: 30px 5vw 60px; }
+  .section { padding: 60px 5vw 40px; }
+}
+
+/* ============ TOAST ============ */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  padding: 14px 24px;
+  background: var(--nex-cyan);
+  color: var(--nex-dark);
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 100;
+  transition: transform 0.3s;
+  box-shadow: 0 10px 40px rgba(0,203,247,0.3);
+}
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="brand-top">
+    <div class="logo">NexFarm<span>3D</span></div>
+    <div class="tag-date">Aquecimento · 22-27 Abril 2026</div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badge">5 dias pro desafio começar</div>
+    <h1>Copys de <em>aquecimento</em><br>para o grupo do WhatsApp.</h1>
+    <p class="hero-sub">
+      10 roteiros de 30 segundos para cada sócio gravar e postar no grupo.
+      Cada copy foi escrita dentro do papel que o sócio vai ocupar nas 4 noites do Desafio Zero a Dez.
+      Formato livre. Grava, posta, aquece.
+    </p>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">60</div>
+        <div class="stat-label">Copys prontas</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">6</div>
+        <div class="stat-label">Sócios + Alisson</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">30s</div>
+        <div class="stat-label">Duração média</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">5</div>
+        <div class="stat-label">Dias de aquecimento</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NAV ============ -->
+<div class="nav-wrap">
+  <nav class="nav">
+    <a href="#como-usar">Como usar</a>
+    <a href="#patrick">Patrick Suyti</a>
+    <a href="#allyson">Allyson</a>
+    <a href="#daniel">Daniel Braz</a>
+    <a href="#alan">Alan Parise</a>
+    <a href="#tiago">Tiago</a>
+    <a href="#alisson">Alisson Ademicon</a>
+  </nav>
+</div>
+
+<!-- ============ INSTRUCTIONS ============ -->
+<section class="instructions" id="como-usar">
+  <h2>Como usar essas copys</h2>
+  <div class="how-to">
+    <div class="how-item">
+      <div class="how-num">01</div>
+      <div class="how-title">Escolhe a copy</div>
+      <div class="how-desc">Cada sócio tem 10 roteiros diferentes. Escolhe a que faz mais sentido com seu jeito.</div>
+    </div>
+    <div class="how-item">
+      <div class="how-num">02</div>
+      <div class="how-title">Copia e lê uma vez</div>
+      <div class="how-desc">Cada copy foi escrita pra ter 30 segundos de fala natural. Lê em voz alta antes de gravar.</div>
+    </div>
+    <div class="how-item">
+      <div class="how-num">03</div>
+      <div class="how-title">Formato livre</div>
+      <div class="how-desc">Grava no celular, selfie, no carro, na farm, onde quiser. Não precisa edição.</div>
+    </div>
+    <div class="how-item">
+      <div class="how-num">04</div>
+      <div class="how-title">Posta no grupo</div>
+      <div class="how-desc">A Lari combinou: 1 vídeo por dia até o dia 27. Intercala entre os 5 sócios + Alisson nas enquetes.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PATRICK ============ -->
+<section class="section" id="patrick">
+  <div class="socio-header">
+    <div class="socio-avatar">PS</div>
+    <div class="socio-info">
+      <h2>Patrick Suyti</h2>
+      <div class="socio-role">Abre e fecha as 4 noites · Pitch da oferta</div>
+      <p class="socio-bio">
+        Conduz o arco narrativo do desafio. Abre a Noite 01 com a visão do mercado e fecha a Noite 04 com a oferta da franquia.
+        Na Noite 03 entrega o método de vendas. É a voz estratégica — ecossistema, visão, decisão.
+      </p>
+      <div class="socio-duties">
+        <span class="duty">Noite 01 · Abertura</span>
+        <span class="duty">Noite 03 · Método de Vendas</span>
+        <span class="duty">Noite 04 · Pitch e Oferta</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="copys-grid">
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 01</span><span class="copy-tag">Visão</span></div>
+      <h3 class="copy-title">O ponto de virada do ano</h3>
+      <p class="copy-script">"E aí turma. <strong>5 dias</strong> pro Desafio Zero a Dez. E eu vou te contar por que esse desafio pode ser o ponto de virada do seu ano. 4 noites, comigo e meu time, abrindo os bastidores de um negócio que cresce 20% ao mês. Não é teoria — é o que a gente faz todo dia. Me vê lá dia 27."</p>
+      <button class="copy-btn" onclick="copyText(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copiar roteiro
+      </button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 02</span><span class="copy-tag">Número</span></div>
+      <h3 class="copy-title">Sem sonho, só número</h3>
+      <p class="copy-script">"Oi, aqui é o Patrick. Faltam 4 dias. E eu não vou te vender sonho — vou te mostrar número. <strong>R$800 mil</strong> de faturamento mensal na distribuidora. 12% de margem líquida. Payback de uma máquina em 3,1 meses. Abre a agenda, bloqueia as 4 noites. Dia 27 começa."</p>
+      <button class="copy-btn" onclick="copyText(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copiar roteiro
+      </button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 03</span><span class="copy-tag">Primeira</span></div>
+      <h3 class="copy-title">A primeira do Brasil</h3>
+      <p class="copy-script">"A gente criou <strong>a primeira franquia de print farm do Brasil</strong>. E durante 4 noites, eu vou abrir pra você como isso funciona por dentro. Mercado, operação, dinheiro e o atalho. Tá na descrição o link. Chama quem você conhece que quer empreender de verdade."</p>
+      <button class="copy-btn" onclick="copyText(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copiar roteiro
+      </button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 04</span><span class="copy-tag">Convite</span></div>
+      <h3 class="copy-title">Do zero ao dez</h3>
+      <p class="copy-script">"Vou te fazer uma pergunta. Quanto você sabe sobre impressão 3D como negócio? Se a resposta for <strong>'nada'</strong>, você tá no lugar certo. Dia 27, 28, 29 e 30, eu, Allyson, Daniel, Tiago e Alan — a gente abre tudo. Do zero ao dez. Me vê lá."</p>
+      <button class="copy-btn" onclick="copyText(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copiar roteiro
+      </button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 05</span><span class="copy-tag">Convicção</span></div>
+      <h3 class="copy-title">Fichas pesadas</h3>
+      <p class="copy-script">"Eu já empreendi em muita coisa. Health, consultoria, mentoria. E eu tô colocando <strong>fichas pesadas na NexFarm 3D</strong>. Por quê? Porque o mercado tá virando agora. Nos próximos 4 dias eu explico exatamente o que enxergo. Se você não aparecer, alguém vai aparecer no seu lugar."</p>
+      <button class="copy-btn" onclick="copyText(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copiar roteiro
+      </button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 06</span><span class="copy-tag">Método</span></div>
+      <h3 class="copy-title">Noite 3 — método aberto</h3>
+      <p class="copy-script">"Faltam 5 dias pro desafio começar. Adianto uma coisa: na <strong>noite 3 eu abro meu método de vendas</strong>. O mesmo que a gente usou pra faturar R$800 mil no mês passado. Isso normalmente é conteúdo de mentoria de R$15 mil. Dia 29, no ar. De graça."</p>
+      <button class="copy-btn" onclick="copyText(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copiar roteiro
+      </button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 07</span><span class="copy-tag">Indústria</span></div>
+      <h3 class="copy-title">Indústria em miniatura</h3>
+      <p class="copy-script">"Patrick aqui. Se você é empreendedor, ou quer ser, presta atenção. <strong>Impressão 3D não é impressora — é indústria em miniatura</strong>. E a oportunidade tá se abrindo AGORA. Dia 27 a gente começa. 4 noites. Pegou seu ingresso? Não? Então corre lá."</p>
+      <button class="copy-btn" onclick="copyText(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copiar roteiro
+      </button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 08</span><span class="copy-tag">Transparência</span></div>
+      <h3 class="copy-title">Abrir os números</h3>
+      <p class="copy-script">"Todo mundo fala em empreender. Poucos tão dispostos a <strong>abrir os números</strong>. Nesse desafio, eu abro. Daniel abre. Alan abre. Allyson e Tiago mostram a farm rodando. Você vai ver um negócio por dentro. Dia 27. Link na descrição."</p>
+      <button class="copy-btn" onclick="copyText(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copiar roteiro
+      </button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 09</span><span class="copy-tag">Escassez</span></div>
+      <h3 class="copy-title">20 vagas. Só uma vez.</h3>
+      <p class="copy-script">"Sou direto. <strong>20 vagas</strong> de franquia no final desse desafio. A gente só abre uma vez. E eu quero que você saiba disso antes de qualquer pessoa. Guarda: 27, 28, 29 e 30 de abril. Noite da virada é dia 30. Me vê lá."</p>
+      <button class="copy-btn" onclick="copyText(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copiar roteiro
+      </button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 10</span><span class="copy-tag">ROI</span></div>
+      <h3 class="copy-title">R$17,90 por 6 dígitos</h3>
+      <p class="copy-script">"Última coisa antes de você fechar esse vídeo. O Desafio Zero a Dez custa <strong>R$17,90</strong>. A decisão que você pode tomar lá no fim da noite 4, a gente tá falando de seis dígitos. Investe 4 noites da sua semana. Pode mudar seu ano."</p>
+      <button class="copy-btn" onclick="copyText(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copiar roteiro
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ALLYSON ============ -->
+<section class="section" id="allyson">
+  <div class="socio-header">
+    <div class="socio-avatar">AL</div>
+    <div class="socio-info">
+      <h2>Allyson</h2>
+      <div class="socio-role">A voz do "já fiz e funciona" · Operação e Farm</div>
+      <p class="socio-bio">
+        Opera a Quase Tudo 3D há 3 anos. 13 máquinas rodando 20h/dia. É quem prova que o negócio funciona na prática.
+        Na Noite 02 abre a farm ao vivo. Na Noite 04 mostra setup do franqueado novo.
+      </p>
+      <div class="socio-duties">
+        <span class="duty">Noite 01 · História e Panorama</span>
+        <span class="duty">Noite 02 · Tour da Farm</span>
+        <span class="duty">Noite 04 · Setup Franqueado</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="copys-grid">
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 01</span><span class="copy-tag">História</span></div>
+      <h3 class="copy-title">De 1 máquina a 13</h3>
+      <p class="copy-script">"E aí galera, aqui é o Allyson. Tenho uma farm de impressão 3D há mais de 3 anos. Comecei com <strong>UMA máquina dentro de casa</strong>. Hoje tenho 13 rodando 20 horas por dia. No dia 27 eu vou contar tudo — o que deu certo, o que deu errado. Bora?"</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 02</span><span class="copy-tag">Processo</span></div>
+      <h3 class="copy-title">Não é ligar e esperar</h3>
+      <p class="copy-script">"Cara, se você acha que farm de impressão 3D é ligar a máquina e esperar, <strong>você não tem ideia do tamanho do negócio</strong>. Mas calma — eu vou te mostrar. Noite 2 do desafio, tour completo na minha farm. Você vai ver pedido entrando e saindo. Se liga."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 03</span><span class="copy-tag">Conta</span></div>
+      <h3 class="copy-title">R$7 mil por máquina</h3>
+      <p class="copy-script">"Olha pra essa máquina. R$4.150 de custo. Me dá R$11 mil de receita por mês. <strong>R$7 mil líquido</strong>. Eu tenho 13 delas. Faz a conta. No desafio eu mostro como isso roda de verdade. Dia 27, beleza?"</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 04</span><span class="copy-tag">Começo</span></div>
+      <h3 class="copy-title">"Quanto eu precisaria pra começar?"</h3>
+      <p class="copy-script">"Todo mundo me pergunta: 'Ally, quanto eu precisaria pra começar?'. E a resposta <strong>não é o que você tá pensando</strong>. Na noite 1 eu vou contar minha história — como saí de 1 máquina em casa pra 13 em escala. E o que eu faria diferente hoje. Te vejo lá."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 05</span><span class="copy-tag">Prejuízo</span></div>
+      <h3 class="copy-title">3 anos de aprendizado</h3>
+      <p class="copy-script">"Eu já quebrei máquina. Já perdi pedido. Já achei que ia fechar as portas. Se eu tivesse visto <strong>3 anos atrás</strong> o que vou te mostrar no desafio, tinha economizado um monte de prejuízo. A gente começa dia 27."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 06</span><span class="copy-tag">Prático</span></div>
+      <h3 class="copy-title">Não sou teórico</h3>
+      <p class="copy-script">"Aqui é o Allyson. <strong>Eu não sou teórico — eu opero todo dia</strong>. E nessas 4 noites, você vai ouvir de mim o que ninguém fala no YouTube. O lado prático da operação. Máquina, filamento, manutenção, cliente difícil, tudo. Link na descrição."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 07</span><span class="copy-tag">Produtos</span></div>
+      <h3 class="copy-title">Lista que roda na minha farm</h3>
+      <p class="copy-script">"Sabe o que mais quebra farm de impressão 3D no primeiro ano? Não é a máquina. <strong>É o operador não saber o que imprimir</strong>. Na noite 2, eu abro minha lista de produtos mais lucrativos. A mesma que roda na minha farm. Dia 28, ao vivo."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 08</span><span class="copy-tag">Ao vivo</span></div>
+      <h3 class="copy-title">Farm ao vivo, câmera aberta</h3>
+      <p class="copy-script">"Vou mostrar minha farm ao vivo. <strong>Câmera aberta</strong>. Você vai ver pedido entrando, fatiamento, produção, pós-produção, expedição. Passo a passo real. No dia 28. Não é vídeo editado — é a farm funcionando. Me vê lá."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 09</span><span class="copy-tag">Quebra</span></div>
+      <h3 class="copy-title">Não precisa ser engenheiro</h3>
+      <p class="copy-script">"Muita gente acha que precisa ser engenheiro pra operar farm. <strong>Mentira</strong>. Eu comecei sem saber nada. Te juro. E se você vier nas 4 noites do desafio, você sai com a cabeça muito mais clara do que 90% dos donos de farm aí fora. Dia 27."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 10</span><span class="copy-tag">Setup</span></div>
+      <h3 class="copy-title">Setup ideal da primeira máquina</h3>
+      <p class="copy-script">"Se você tá pensando em entrar pra impressão 3D, <strong>não toma nenhuma decisão antes do dia 30</strong>. Sério. Porque na última noite eu mostro o setup ideal pra primeira máquina. Quanto gastar, o que comprar, como começar. Te espero lá."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DANIEL ============ -->
+<section class="section" id="daniel">
+  <div class="socio-header">
+    <div class="socio-avatar">DB</div>
+    <div class="socio-info">
+      <h2>Daniel Braz</h2>
+      <div class="socio-role">Sócio Grupo Paladio · Financeiro e Estratégia</div>
+      <p class="socio-bio">
+        Sócio do Patrick no Grupo Paladio. É quem traz o olhar financeiro e estratégico do ecossistema.
+        Noite 01: 3 caminhos de monetização. Noite 03: DRE real e payback. Noite 04: por que rede vence fazer sozinho.
+      </p>
+      <div class="socio-duties">
+        <span class="duty">Noite 01 · 3 Caminhos de Monetização</span>
+        <span class="duty">Noite 03 · DRE e Payback</span>
+        <span class="duty">Noite 04 · Rede vs. Solo</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="copys-grid">
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 01</span><span class="copy-tag">Dinheiro</span></div>
+      <h3 class="copy-title">"Dá dinheiro?"</h3>
+      <p class="copy-script">"E aí, aqui é o Daniel Braz, sócio do Patrick no Grupo Paladio. A pergunta que mais recebo é: <strong>'Dá dinheiro?'</strong>. No desafio, eu não respondo com achismo. Respondo com DRE. Vou abrir as contas de verdade. Dia 27 a gente começa."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 02</span><span class="copy-tag">Caminhos</span></div>
+      <h3 class="copy-title">Os 3 caminhos da impressão 3D</h3>
+      <p class="copy-script">"Existem <strong>3 caminhos</strong> pra ganhar dinheiro com impressão 3D. E 90% das pessoas só conhecem um. Na noite 1, eu abro os 3. E mostro qual faz mais sentido pra cada perfil. Quer saber qual é o seu caminho? Dia 27 no desafio."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 03</span><span class="copy-tag">Payback</span></div>
+      <h3 class="copy-title">3,1 meses. Conta fechada.</h3>
+      <p class="copy-script">"Oi, Daniel aqui. Olha só — uma máquina de R$4.150 pagando ela mesma em <strong>3,1 meses</strong>. Isso não é projeção, é conta fechada. E eu vou te mostrar cada linha desse DRE. Na noite 3. Se você gosta de número, essa noite é pra você."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 04</span><span class="copy-tag">Caixa</span></div>
+      <h3 class="copy-title">Quebra em 2 anos</h3>
+      <p class="copy-script">"A maioria das pessoas começa negócio sem saber controlar caixa. Resultado? <strong>Quebra em 2 anos</strong>. No desafio, a gente vai falar de fluxo de caixa, payback, precificação. O que eu gostaria de ter aprendido antes de abrir minha primeira empresa. Dia 27."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 05</span><span class="copy-tag">Prova</span></div>
+      <h3 class="copy-title">Por que coloquei meu dinheiro</h3>
+      <p class="copy-script">"Eu coloquei dinheiro meu no ecossistema NexFarm. E antes de colocar, <strong>fiz as contas mil vezes</strong>. Na noite 3, eu abro essas contas. Por que faz sentido, onde tá o risco, qual é o retorno. Guarda a data: 29 de abril."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 06</span><span class="copy-tag">Provocação</span></div>
+      <h3 class="copy-title">Quanto você entende do seu negócio?</h3>
+      <p class="copy-script">"Faltam 5 dias. Deixo uma provocação: <strong>quanto você realmente entende do seu próprio negócio?</strong> Quanto entra, quanto sai, quanto sobra? No desafio, a gente destrincha isso — pensando em farm 3D, mas vale pra qualquer negócio. Me vê lá."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 07</span><span class="copy-tag">Convite</span></div>
+      <h3 class="copy-title">Chama quem você quer junto</h3>
+      <p class="copy-script">"Daniel aqui. 4 noites, 5 sócios, <strong>um ecossistema aberto</strong>. Se você já tem um negócio, vai pegar ideias. Se não tem, vai sair com um plano. Dia 27 a gente começa. Chama quem você quer que esteja junto."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 08</span><span class="copy-tag">Rede</span></div>
+      <h3 class="copy-title">Rede vence solo</h3>
+      <p class="copy-script">"Sabe por que rede ganha de negócio solo? <strong>Porque ninguém cresce sozinho</strong>. Na noite 4, eu mostro os números reais de quem tá dentro da NexFarm comparado com quem tá fora. A conta não fecha pra quem insiste em ir sozinho."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 09</span><span class="copy-tag">Sem filtro</span></div>
+      <h3 class="copy-title">Nada maquiado</h3>
+      <p class="copy-script">"Vou abrir no desafio o custo real de cada operação. Máquina, luz, filamento, funcionário, impostos. <strong>Nada maquiado</strong>. Porque se eu te vender que é fácil, você entra e quebra. E eu não quero isso. Dia 27 começa."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 10</span><span class="copy-tag">Educação</span></div>
+      <h3 class="copy-title">A palavra-chave: payback</h3>
+      <p class="copy-script">"Última coisa: <strong>payback</strong>. Essa palavra vai te fazer ganhar ou perder dinheiro. E no desafio, eu vou te mostrar como calcular payback de qualquer investimento — farm 3D ou qualquer outro. Link do desafio na descrição. Te espero."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ALAN ============ -->
+<section class="section" id="alan">
+  <div class="socio-header">
+    <div class="socio-avatar">AP</div>
+    <div class="socio-info">
+      <h2>Alan Parise</h2>
+      <div class="socio-role">Arquiteto da Franquia NexFarm · Modelo e Território</div>
+      <p class="socio-bio">
+        Sócio-operador responsável pela franquia. Estruturou o modelo completo — COF, contrato, academy, mentoria, manuais.
+        Noite 03: precificação estratégica ao vivo. Noite 04: apresenta o modelo NexFarm (território, academy, suporte).
+      </p>
+      <div class="socio-duties">
+        <span class="duty">Noite 03 · Precificação ao vivo</span>
+        <span class="duty">Noite 04 · Modelo NexFarm</span>
+        <span class="duty">COF · Contrato · Academy</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="copys-grid">
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 01</span><span class="copy-tag">Modelo</span></div>
+      <h3 class="copy-title">O arquiteto da NexFarm</h3>
+      <p class="copy-script">"Oi, aqui é o Alan Parise. Sou o cara responsável por estruturar a franquia NexFarm 3D — <strong>a primeira franquia de print farm do Brasil</strong>. Na noite 4, apresento o modelo inteiro. Território, academy, suporte. Dia 30 é onde mora a oportunidade."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 02</span><span class="copy-tag">Mercado</span></div>
+      <h3 class="copy-title">R$270 bi em franchising</h3>
+      <p class="copy-script">"Franchising no Brasil movimenta <strong>R$270 bilhões por ano</strong>. E impressão 3D é um mercado explodindo. Junta os dois? NexFarm. No desafio eu conto como estruturei essa franquia do zero — e por que ela é diferente de tudo que já existiu."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 03</span><span class="copy-tag">Tempo</span></div>
+      <h3 class="copy-title">Tempo é ativo</h3>
+      <p class="copy-script">"Tem diferença brutal entre empreender do zero e abrir uma franquia. E não é só o dinheiro. <strong>É o tempo que você economiza</strong> — e o tempo é o ativo que você não recupera. Na noite 4, te mostro essa conta. Dia 30."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 04</span><span class="copy-tag">Oferta</span></div>
+      <h3 class="copy-title">R$10 mil durante o desafio</h3>
+      <p class="copy-script">"Se você tá pensando em abrir um negócio próprio em 2026, presta atenção. Preço pra abrir franquia bem estruturada hoje fica entre R$50 mil e R$500 mil. <strong>A NexFarm tá em R$10 mil durante o desafio</strong>. Só pras primeiras vagas. Dia 30."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 05</span><span class="copy-tag">Preço</span></div>
+      <h3 class="copy-title">Precificação ao vivo</h3>
+      <p class="copy-script">"Alan aqui. Na noite 3, eu faço <strong>precificação estratégica ao vivo</strong>. Pego um produto impresso na hora e te mostro quanto cobrar. Se você já vende qualquer coisa — 3D ou não — vai mudar sua forma de precificar. Dia 29."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 06</span><span class="copy-tag">Ecossistema</span></div>
+      <h3 class="copy-title">Não é kit de máquinas</h3>
+      <p class="copy-script">"Uma franquia não é um kit de máquinas. <strong>É um ecossistema</strong>. Academy, onboarding, mentoria, plano de lançamento, manual operacional, suporte técnico. Na noite 4 mostro o que o franqueado recebe dia 1. Tudo tabelado. Dia 30."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 07</span><span class="copy-tag">Compliance</span></div>
+      <h3 class="copy-title">COF e contrato fazem diferença</h3>
+      <p class="copy-script">"COF, contrato de franquia, compliance, lei 13.966. Isso tudo é chato? É. <strong>Mas é o que protege você quando der problema</strong>. No desafio, eu explico por que a NexFarm segue à risca — e por que franquia sem isso é cilada. Dia 27."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 08</span><span class="copy-tag">Escassez</span></div>
+      <h3 class="copy-title">As primeiras 100</h3>
+      <p class="copy-script">"Tô estruturando a NexFarm pra chegar em <strong>1000 franquias em 5 anos</strong>. E as primeiras 100 vão pegar o mercado antes de todo mundo. Na noite 4 eu abro as primeiras 20 vagas. Tá na sua mão entrar ou ficar olhando. Dia 30."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 09</span><span class="copy-tag">ABF</span></div>
+      <h3 class="copy-title">Antes da ABF Expo</h3>
+      <p class="copy-script">"A <strong>ABF Expo</strong> acontece em junho. NexFarm vai estar lá. E as unidades vendidas ANTES da feira vão ter condições que nunca mais vão existir. Esse desafio é sua última chance de entrar antes do mercado virar. Dia 27 a 30."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 10</span><span class="copy-tag">Estrutura</span></div>
+      <h3 class="copy-title">Com método ou sem?</h3>
+      <p class="copy-script">"Já vi muita gente abrir negócio sem método e quebrar. E já vi gente entrar em franquia e virar milionário em 5 anos. Diferença? <strong>Estrutura</strong>. Na noite 4 do desafio, eu apresento a estrutura da NexFarm. Dia 30, no ar."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIAGO ============ -->
+<section class="section" id="tiago">
+  <div class="socio-header">
+    <div class="socio-avatar">TG</div>
+    <div class="socio-info">
+      <h2>Tiago (Tiagão)</h2>
+      <div class="socio-role">Sócio 3DPD · Operação e Distribuição</div>
+      <p class="socio-bio">
+        Sócio da 3DPD, distribuidora que abastece todo o ecossistema. Expert em importação, estoque, logística e processo operacional.
+        Noite 02: workflow do pedido à entrega com Allyson. Noite 04: o que o franqueado recebe no dia 1.
+      </p>
+      <div class="socio-duties">
+        <span class="duty">Noite 02 · Workflow Operacional</span>
+        <span class="duty">Noite 04 · O kit do franqueado</span>
+        <span class="duty">Importação · Estoque · Processo</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="copys-grid">
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 01</span><span class="copy-tag">Distribuidora</span></div>
+      <h3 class="copy-title">A 3DPD por dentro</h3>
+      <p class="copy-script">"E aí, aqui é o Tiagão. Sócio da 3DPD, distribuidora que abastece o ecossistema NexFarm. Na noite 2 do desafio, <strong>vou mostrar a operação por dentro</strong>. Pedido entrando até sair na expedição. Passo a passo. Dia 28, fica ligado."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 02</span><span class="copy-tag">Processo</span></div>
+      <h3 class="copy-title">Não é caos, é processo</h3>
+      <p class="copy-script">"Sabe o que é uma farm 3D funcionando de verdade? <strong>Não é caos. É processo</strong>. Na noite 2 eu abro o fluxo completo: como chega o pedido, como a gente fatia, como produz, como expede. Se você gosta de processo, essa noite é pra você."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 03</span><span class="copy-tag">Bastidor</span></div>
+      <h3 class="copy-title">Onde mora o jogo</h3>
+      <p class="copy-script">"Oi, Tiago aqui. <strong>Bastidor de distribuidora é onde mora o jogo</strong>. Negociação com fornecedor, logística, estoque. Sem isso, farm não roda. No desafio eu abro esses bastidores. Dia 27 começa."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 04</span><span class="copy-tag">Fornecedor</span></div>
+      <h3 class="copy-title">Bambu, Snapmaker, direto</h3>
+      <p class="copy-script">"Eu negocio direto com os <strong>maiores fabricantes de impressora do mundo</strong>. Bambu Lab, Snapmaker. E o que aprendi nessa cadeira, poucos brasileiros sabem. Quer entender como se abastece uma farm no Brasil? Me vê lá no desafio."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 05</span><span class="copy-tag">Prejuízo</span></div>
+      <h3 class="copy-title">Onde o prejuízo mora</h3>
+      <p class="copy-script">"Olha — <strong>máquina parada é prejuízo. Estoque mal planejado é prejuízo. Logística errada é prejuízo</strong>. Na noite 2 eu mostro como a gente resolveu essas 3 coisas na prática. Dia 28, ao vivo."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 06</span><span class="copy-tag">Kit</span></div>
+      <h3 class="copy-title">Abro a caixa na noite 4</h3>
+      <p class="copy-script">"O que o franqueado NexFarm recebe no dia 1? Na noite 4, eu <strong>abro a caixa</strong>. Máquinas, filamento, manual, suporte, software. Tudo detalhado. Se você tá pensando em entrar na franquia, não perde a noite 4. Dia 30."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 07</span><span class="copy-tag">Realidade</span></div>
+      <h3 class="copy-title">Máquina não faz o negócio</h3>
+      <p class="copy-script">"Tiagão aqui. Se você acha que basta ter máquina pra faturar, <strong>cai da cadeira</strong>. Tem que ter processo. Tem que ter curva. Tem que ter margem. E nessas 4 noites, a gente destrincha tudo. Dia 27."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 08</span><span class="copy-tag">Operação</span></div>
+      <h3 class="copy-title">Onde o dinheiro escapa</h3>
+      <p class="copy-script">"Todo mundo fala em vender. Poucos falam em OPERAR. <strong>E é na operação que o dinheiro escapa</strong>. Na noite 2 eu mostro os 5 pontos onde farm 3D perde dinheiro — e como evitar. Dia 28."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 09</span><span class="copy-tag">Margem</span></div>
+      <h3 class="copy-title">12% e 40% nos detalhes</h3>
+      <p class="copy-script">"O segredo pra <strong>12% de margem na distribuição e 40% na operação</strong>? Nos detalhes. E nessas 4 noites, a gente abre os detalhes. Não é magia — é método. Dia 27 a gente começa. Me vê lá."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 10</span><span class="copy-tag">Caminho</span></div>
+      <h3 class="copy-title">Qual máquina comprar?</h3>
+      <p class="copy-script">"Última coisa: se você tá pensando em comprar máquina solta pra começar — <strong>calma</strong>. No desafio a gente mostra o caminho certo. Não é a máquina mais cara. Nem a mais barata. Vou te contar qual é. Dia 27 rola a primeira noite."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ALISSON ============ -->
+<section class="section" id="alisson">
+  <div class="socio-header">
+    <div class="socio-avatar">AS</div>
+    <div class="socio-info">
+      <h2>Alisson Ademicon</h2>
+      <div class="socio-role">Engajador do grupo · Enquetes, imagens e indicação</div>
+      <p class="socio-bio">
+        Responsável pelo engajamento diário do grupo — enquetes, imagens, lembretes, reforço da página de indicação.
+        Não conduz noite, mas mantém o grupo quente e convidando gente nova até o dia 27.
+      </p>
+      <div class="socio-duties">
+        <span class="duty">Enquetes diárias</span>
+        <span class="duty">Reforço página de indicação</span>
+        <span class="duty">Lembretes e contagem regressiva</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="copys-grid">
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 01</span><span class="copy-tag">Enquete</span></div>
+      <h3 class="copy-title">O maior desafio do seu negócio</h3>
+      <p class="copy-script">"Fala turma! Aqui é o Alisson. <strong>5 dias pro desafio</strong>. Bora esquentar esse grupo. Responde aí no chat: qual o maior desafio que você enfrenta hoje no seu negócio? A gente leva essas respostas pras noites ao vivo."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 02</span><span class="copy-tag">Calibragem</span></div>
+      <h3 class="copy-title">Conhecia impressão 3D?</h3>
+      <p class="copy-script">"Oi pessoal! <strong>Quem aqui já conhecia o mundo da impressão 3D antes de cair nesse grupo?</strong> Manda na enquete que acabei de postar. Os sócios vão usar essas respostas pra calibrar o conteúdo das 4 noites."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 03</span><span class="copy-tag">Indicação</span></div>
+      <h3 class="copy-title">Chama seu amigo empreendedor</h3>
+      <p class="copy-script">"Galera, o <strong>link da página de indicação</strong> tá no tópico. Quem você conhece que precisa assistir esse desafio? Empresário, amigo empreendedor, cunhado que quer abrir negócio. Chama todo mundo. Quanto mais gente, mais valor pra gente."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 04</span><span class="copy-tag">Reflexão</span></div>
+      <h3 class="copy-title">O que faria diferente?</h3>
+      <p class="copy-script">"Gente, olha só — 5 dias pro desafio começar. Pergunta: <strong>se você tivesse certeza de que os próximos 4 dias iam mudar seu ano, o que você faria diferente?</strong> Comenta aqui embaixo."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 05</span><span class="copy-tag">Agenda</span></div>
+      <h3 class="copy-title">Salva o print</h3>
+      <p class="copy-script">"Aqui é o Alisson. Acabei de mandar uma imagem com o <strong>cronograma completo das 4 noites</strong>. Salva no print, bloqueia a agenda. Porque perder uma noite é perder 25% do desafio. 27, 28, 29 e 30."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 06</span><span class="copy-tag">Pergunta</span></div>
+      <h3 class="copy-title">Sua pergunta ao vivo</h3>
+      <p class="copy-script">"Oi galera. Pergunta pra soltar no grupo: <strong>se você pudesse ter UMA resposta dos sócios nas noites ao vivo, qual seria?</strong> Solta aí nos comentários. As 10 perguntas mais votadas vão pro ar durante o desafio."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 07</span><span class="copy-tag">Ranking</span></div>
+      <h3 class="copy-title">Ranking de indicadores</h3>
+      <p class="copy-script">"Pessoal! Subi a <strong>página de indicação atualizada</strong>. Link no grupo. Quem indicar mais gente entra num ranking especial — tem brinde pros três primeiros. Chama aquele amigo que tá olhando pra fora do CLT."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 08</span><span class="copy-tag">Confirmação</span></div>
+      <h3 class="copy-title">Lista dos 100% confirmados</h3>
+      <p class="copy-script">"Fala turma! 5 dias. Vamos de contagem regressiva. <strong>Quem tá 100% confirmado pra todas as 4 noites?</strong> Manda um emoji de mão aqui no chat. A gente tá criando uma lista especial pra esse pessoal."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 09</span><span class="copy-tag">Dado</span></div>
+      <h3 class="copy-title">12x mais chance de decidir</h3>
+      <p class="copy-script">"Gente, olha esse dado: <strong>quem assiste os 4 dias inteiros do desafio tem 12x mais chance</strong> de tomar uma decisão que muda o ano. Não é invenção minha — é estatística dos nossos últimos eventos. Bloqueia as 4 noites. Dia 27 começa."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 10</span><span class="copy-tag">Avisos</span></div>
+      <h3 class="copy-title">Grupo de avisos diário</h3>
+      <p class="copy-script">"Último recadinho: se você ainda não entrou no grupo oficial de avisos, entra agora. <strong>Vou postar enquete todo dia até o desafio</strong>, imagens dos bastidores e aviso quando começar cada noite. Ninguém pode ficar de fora."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<section class="footer">
+  <div class="footer-content">
+    <h3>Bora aquecer esse grupo.</h3>
+    <p>60 roteiros prontos, contextualizados com o papel de cada sócio nas 4 noites. Intercala entre os sócios até o dia 27, mantém o grupo quente, chega no desafio com todo mundo ligado.</p>
+    <div class="footer-tag">NexFarm 3D · Desafio Zero a Dez · 27-30 Abril 2026</div>
+  </div>
+</section>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast">Copiado!</div>
+
+<script>
+function copyText(btn) {
+  const card = btn.closest('.copy-card');
+  const script = card.querySelector('.copy-script').innerText;
+  navigator.clipboard.writeText(script).then(() => {
+    const original = btn.innerHTML;
+    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Copiado';
+    btn.classList.add('copied');
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(() => {
+      btn.innerHTML = original;
+      btn.classList.remove('copied');
+      toast.classList.remove('show');
+    }, 1800);
+  });
+}
+</script>
+
+</body>
+</html>
