@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Copys de Aquecimento — Desafio Zero a Dez | NexFarm 3D</title>
-<meta name="description" content="60 roteiros de 30 segundos com foco em criação de renda. Cada sócio no protagonismo da própria expertise. Aquecimento do Desafio Zero a Dez, 27-30 de abril.">
+<meta name="description" content="60 roteiros de 30 segundos no tom de grupo de WhatsApp. Cada especialista se apresenta e entrega uma promessa específica. Foco em presença nas 4 noites + indicação pro sorteio Bambu A1 Mini.">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
@@ -22,78 +22,30 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--nex-dark);
-  color: var(--nex-white);
-  line-height: 1.55;
-  overflow-x: hidden;
-}
-h1, h2, h3, h4, .display {
-  font-family: 'Space Grotesk', sans-serif;
-  letter-spacing: -0.02em;
-  font-weight: 700;
-}
+body { font-family: 'Inter', sans-serif; background: var(--nex-dark); color: var(--nex-white); line-height: 1.55; overflow-x: hidden; }
+h1, h2, h3, h4, .display { font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.02em; font-weight: 700; }
 
 .hero {
   min-height: 90vh;
-  background:
-    radial-gradient(circle at 15% 10%, rgba(0,203,247,0.18) 0%, transparent 45%),
-    radial-gradient(circle at 85% 90%, rgba(0,152,213,0.14) 0%, transparent 50%),
-    var(--nex-dark);
-  padding: 40px 6vw 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  overflow: hidden;
+  background: radial-gradient(circle at 15% 10%, rgba(0,203,247,0.18) 0%, transparent 45%), radial-gradient(circle at 85% 90%, rgba(0,152,213,0.14) 0%, transparent 50%), var(--nex-dark);
+  padding: 40px 6vw 80px; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden;
 }
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(0,203,247,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,203,247,0.04) 1px, transparent 1px);
-  background-size: 60px 60px;
-  pointer-events: none;
-}
-.brand-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--nex-border);
-  position: relative;
-  z-index: 2;
-}
+.hero::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(0,203,247,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,203,247,0.04) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; }
+.brand-top { display: flex; justify-content: space-between; align-items: center; padding-bottom: 20px; border-bottom: 1px solid var(--nex-border); position: relative; z-index: 2; }
 .logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.02em; }
 .logo span { color: var(--nex-cyan); }
 .tag-date { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--nex-grey); font-weight: 500; }
-.hero-content { max-width: 1000px; margin-top: 8vh; position: relative; z-index: 2; }
-.hero-badge {
-  display: inline-flex; align-items: center; gap: 10px;
-  padding: 8px 16px; background: rgba(0,203,247,0.08);
-  border: 1px solid rgba(0,203,247,0.3); border-radius: 100px;
-  font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--nex-cyan); font-weight: 500; margin-bottom: 28px;
-}
-.hero-badge::before {
-  content: ''; width: 8px; height: 8px; border-radius: 50%;
-  background: var(--nex-cyan); box-shadow: 0 0 12px var(--nex-cyan);
-  animation: pulse 2s infinite;
-}
+.hero-content { max-width: 1000px; margin-top: 6vh; position: relative; z-index: 2; }
+.hero-badge { display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px; background: rgba(0,203,247,0.08); border: 1px solid rgba(0,203,247,0.3); border-radius: 100px; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--nex-cyan); font-weight: 500; margin-bottom: 28px; }
+.hero-badge::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--nex-cyan); box-shadow: 0 0 12px var(--nex-cyan); animation: pulse 2s infinite; }
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-.hero h1 { font-size: clamp(40px, 6vw, 78px); line-height: 0.98; margin-bottom: 24px; }
-.hero h1 em {
-  font-style: normal;
-  background: linear-gradient(135deg, var(--nex-cyan) 0%, var(--nex-blue) 100%);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-}
-.hero-sub { font-size: clamp(16px, 1.8vw, 20px); color: var(--nex-grey-light); max-width: 760px; line-height: 1.55; margin-bottom: 40px; }
-.hero-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; max-width: 900px; margin-top: 20px; }
+.hero h1 { font-size: clamp(40px, 6vw, 72px); line-height: 0.98; margin-bottom: 24px; }
+.hero h1 em { font-style: normal; background: linear-gradient(135deg, var(--nex-cyan) 0%, var(--nex-blue) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero-sub { font-size: clamp(16px, 1.8vw, 20px); color: var(--nex-grey-light); max-width: 800px; line-height: 1.55; margin-bottom: 32px; }
+.hero-sub strong { color: var(--nex-white); font-weight: 600; }
+.hero-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; max-width: 960px; margin-top: 16px; }
 .stat { padding: 20px 24px; background: rgba(10,20,48,0.6); border: 1px solid var(--nex-border); border-radius: 12px; backdrop-filter: blur(10px); }
-.stat-num { font-family: 'Space Grotesk', sans-serif; font-size: 32px; font-weight: 700; color: var(--nex-cyan); line-height: 1; margin-bottom: 6px; }
+.stat-num { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; color: var(--nex-cyan); line-height: 1; margin-bottom: 6px; }
 .stat-label { font-size: 12px; color: var(--nex-grey); text-transform: uppercase; letter-spacing: 0.08em; }
 
 .nav-wrap { position: sticky; top: 0; z-index: 50; background: rgba(4,12,34,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--nex-border); padding: 16px 6vw; }
@@ -102,8 +54,9 @@ h1, h2, h3, h4, .display {
 .nav a { padding: 10px 18px; border-radius: 100px; color: var(--nex-grey-light); text-decoration: none; font-size: 14px; font-weight: 500; white-space: nowrap; transition: all 0.2s; border: 1px solid transparent; }
 .nav a:hover { background: rgba(0,203,247,0.08); border-color: rgba(0,203,247,0.2); color: var(--nex-white); }
 
-.instructions { padding: 60px 6vw 20px; max-width: 1200px; margin: 0 auto; }
-.instructions h2 { font-size: clamp(24px, 3vw, 32px); margin-bottom: 20px; }
+.briefing { padding: 60px 6vw 20px; max-width: 1200px; margin: 0 auto; }
+.briefing h2 { font-size: clamp(24px, 3vw, 32px); margin-bottom: 8px; }
+.briefing .subtitle { color: var(--nex-grey-light); font-size: 15px; margin-bottom: 24px; max-width: 780px; line-height: 1.55; }
 .how-to { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-top: 24px; }
 .how-item { padding: 24px; background: var(--nex-panel); border: 1px solid var(--nex-border); border-radius: 12px; }
 .how-num { font-family: 'Space Grotesk', sans-serif; font-size: 32px; font-weight: 700; color: var(--nex-cyan); line-height: 1; margin-bottom: 12px; }
@@ -126,7 +79,7 @@ h1, h2, h3, h4, .display {
 .copy-num { font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 600; color: var(--nex-cyan); letter-spacing: 0.15em; text-transform: uppercase; }
 .copy-tag { font-size: 10px; padding: 4px 10px; background: rgba(0,203,247,0.1); border: 1px solid rgba(0,203,247,0.25); border-radius: 100px; color: var(--nex-cyan); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
 .copy-title { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; margin-bottom: 14px; line-height: 1.25; }
-.copy-script { font-size: 15px; line-height: 1.6; color: var(--nex-grey-light); margin-bottom: 18px; }
+.copy-script { font-size: 15px; line-height: 1.65; color: var(--nex-grey-light); margin-bottom: 18px; }
 .copy-script strong { color: var(--nex-white); font-weight: 600; }
 .copy-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; background: transparent; border: 1px solid rgba(0,203,247,0.4); border-radius: 100px; color: var(--nex-cyan); font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s; }
 .copy-btn:hover { background: rgba(0,203,247,0.1); border-color: var(--nex-cyan); }
@@ -136,7 +89,7 @@ h1, h2, h3, h4, .display {
 .footer { padding: 60px 6vw 40px; border-top: 1px solid var(--nex-border); background: var(--nex-darker); margin-top: 80px; }
 .footer-content { max-width: 1200px; margin: 0 auto; text-align: center; }
 .footer h3 { font-size: clamp(24px, 3vw, 36px); margin-bottom: 16px; }
-.footer p { color: var(--nex-grey-light); font-size: 15px; max-width: 640px; margin: 0 auto 24px; line-height: 1.6; }
+.footer p { color: var(--nex-grey-light); font-size: 15px; max-width: 680px; margin: 0 auto 24px; line-height: 1.6; }
 .footer-tag { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--nex-grey); margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--nex-border); }
 
 @media (max-width: 720px) {
@@ -159,41 +112,44 @@ h1, h2, h3, h4, .display {
     <div class="tag-date">Aquecimento · 22-27 Abril 2026</div>
   </div>
   <div class="hero-content">
-    <div class="hero-badge">5 dias pro desafio começar</div>
-    <h1>Cada especialista,<br>sua <em>expertise</em>,<br>uma nova renda.</h1>
+    <div class="hero-badge">5 dias pra noite 1 · 300 pessoas no grupo</div>
+    <h1>Cada impressora<br>pode gerar <em>+R$5 mil/mês</em>.<br>Vamos esquentar o grupo.</h1>
     <p class="hero-sub">
-      60 roteiros de 30 segundos — 10 por especialista. Cada copy construída em cima da autoridade própria de cada sócio
-      e focada no que importa pro espectador: <strong style="color:var(--nex-white)">como criar renda com impressão 3D</strong>.
-      Formato livre. Grava, posta, aquece.
+      60 roteiros de 30 segundos pra quem já comprou o desafio. Cada especialista <strong>se apresenta, entrega uma promessa específica da noite dele</strong>
+      e puxa os 300 caras pra estarem presentes das 20h às 22h, dia 27 a 30. Bônus em cada copy: sorteio da Bambu Lab A1 Mini — cada 2 amigos que entrarem é +1 ticket.
     </p>
     <div class="hero-stats">
-      <div class="stat"><div class="stat-num">60</div><div class="stat-label">Copys prontas</div></div>
-      <div class="stat"><div class="stat-num">6</div><div class="stat-label">Especialistas</div></div>
-      <div class="stat"><div class="stat-num">30s</div><div class="stat-label">Duração média</div></div>
-      <div class="stat"><div class="stat-num">5</div><div class="stat-label">Dias de aquecimento</div></div>
+      <div class="stat"><div class="stat-num">R$5k</div><div class="stat-label">Por impressora/mês</div></div>
+      <div class="stat"><div class="stat-num">80-90%</div><div class="stat-label">Margem nos nichos</div></div>
+      <div class="stat"><div class="stat-num">4 noites</div><div class="stat-label">20h às 22h · Zoom</div></div>
+      <div class="stat"><div class="stat-num">60 copys</div><div class="stat-label">Prontas pra gravar</div></div>
     </div>
   </div>
 </section>
 
 <div class="nav-wrap">
   <nav class="nav">
-    <a href="#como-usar">Como usar</a>
-    <a href="#patrick">Patrick Suyti</a>
-    <a href="#allyson">Allyson</a>
-    <a href="#daniel">Daniel Braz</a>
-    <a href="#alan">Alan Parise</a>
+    <a href="#briefing">Briefing</a>
+    <a href="#patrick">Patrick</a>
+    <a href="#alysson">Alysson</a>
     <a href="#tiago">Tiago</a>
+    <a href="#daniel">Daniel</a>
+    <a href="#alan">Alan</a>
     <a href="#alisson">Alisson</a>
   </nav>
 </div>
 
-<section class="instructions" id="como-usar">
-  <h2>Como usar essas copys</h2>
+<section class="briefing" id="briefing">
+  <h2>Briefing pro time</h2>
+  <p class="subtitle">
+    Tem 300 pessoas esperando no grupo. Elas já pagaram R$17,90, já estão dentro. O trabalho agora é: <strong style="color:var(--nex-white)">manter quente, aparecer nas 4 noites, indicar amigos</strong> (cada 2 = +1 ticket pro sorteio da Bambu A1 Mini).
+    Cada copy começa com você se apresentando e entrega uma promessa concreta da SUA noite.
+  </p>
   <div class="how-to">
-    <div class="how-item"><div class="how-num">01</div><div class="how-title">Cada um no seu papel</div><div class="how-desc">As copys foram escritas pra cada sócio falar do que ele DOMINA. Não precisa citar os outros — autoridade própria já carrega.</div></div>
-    <div class="how-item"><div class="how-num">02</div><div class="how-title">Foco em renda</div><div class="how-desc">Toda copy responde uma pergunta silenciosa do espectador: "como isso me faz ganhar dinheiro?"</div></div>
-    <div class="how-item"><div class="how-num">03</div><div class="how-title">Formato livre</div><div class="how-desc">Celular, selfie, carro, farm, escritório. Sem edição. 30 segundos de verdade valem mais que 1 minuto de produção.</div></div>
-    <div class="how-item"><div class="how-num">04</div><div class="how-title">Intercala no grupo</div><div class="how-desc">1 vídeo por dia até dia 27. Alisson mantém enquete/indicação rodando em paralelo.</div></div>
+    <div class="how-item"><div class="how-num">01</div><div class="how-title">Abre com o seu nome</div><div class="how-desc">"Fala galera, aqui é o [seu nome]…" — tom natural, de amigo falando com amigo no grupo.</div></div>
+    <div class="how-item"><div class="how-num">02</div><div class="how-title">Promessa da sua noite</div><div class="how-desc">Cada copy entrega UMA coisa específica que você vai abrir na sua noite. Concreto, não genérico.</div></div>
+    <div class="how-item"><div class="how-num">03</div><div class="how-title">20h às 22h · Zoom</div><div class="how-desc">As 4 noites rodam no mesmo horário. Lembra o pessoal: bloqueia a agenda das 4 noites seguidas.</div></div>
+    <div class="how-item"><div class="how-num">04</div><div class="how-title">Sorteio Bambu A1 Mini</div><div class="how-desc">Sempre que der gancho, puxa pra indicação: cada 2 amigos = +1 ticket. A gente sorteia uma máquina.</div></div>
   </div>
 </section>
 
@@ -203,363 +159,178 @@ h1, h2, h3, h4, .display {
     <div class="socio-avatar">PS</div>
     <div class="socio-info">
       <h2>Patrick Suyti</h2>
-      <div class="socio-role">Abre e fecha as 4 noites · Apresenta a oportunidade</div>
+      <div class="socio-role">Noite 03 · Vendas sem parecer vendedor</div>
       <p class="socio-bio">
-        Traz a visão macro do desafio: mercado, oportunidade, método de vendas, oferta final.
-        Abre o jogo e convida o espectador pra entender o que tá se abrindo em impressão 3D no Brasil agora.
+        "Ensina como vender suas peças sem parecer vendedor." É isso que a LP promete. O método que transforma 2 pessoas com a mesma impressora em um faturando R$3k e outro R$15k.
       </p>
       <div class="socio-duties">
-        <span class="duty">Noite 01 · Oportunidade</span>
-        <span class="duty">Noite 03 · Método de Vendas</span>
-        <span class="duty">Noite 04 · Pitch e Oferta</span>
+        <span class="duty">Método de venda</span>
+        <span class="duty">Noite 03 · Dia 29 · 20h</span>
+        <span class="duty">Abre os 4 blocos</span>
       </div>
     </div>
   </div>
 
   <div class="copys-grid">
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 01</span><span class="copy-tag">Oportunidade</span></div>
-      <h3 class="copy-title">Uma categoria que poucos enxergam</h3>
-      <p class="copy-script">"Se você tá buscando uma nova fonte de renda em 2026, quero te mostrar uma categoria que <strong>poucos empreendedores brasileiros enxergaram</strong>. Impressão 3D deixou de ser nicho técnico — virou indústria em miniatura. Dia 27 começa o Desafio Zero a Dez. 4 noites abrindo um mercado que tá se mexendo agora."</p>
+      <div class="copy-header"><span class="copy-num">Copy 01</span><span class="copy-tag">Abertura</span></div>
+      <h3 class="copy-title">Vender sem parecer vendedor</h3>
+      <p class="copy-script">"Fala galera, aqui é o Patrick. Falta pouco pra gente começar e eu quero te adiantar uma coisa. Na <strong>noite 3</strong> eu vou te ensinar a vender o que você imprime SEM parecer vendedor. Porque vendedor todo mundo ignora — o cara que resolve problema, todo mundo compra. Salva essa noite. Dia 29, 20h."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 02</span><span class="copy-tag">Promessa</span></div>
-      <h3 class="copy-title">O que você aprende em 4 noites</h3>
-      <p class="copy-script">"Em 4 noites você aprende: <strong>como impressão 3D gera dinheiro, como operar uma farm na prática, como calcular payback de qualquer máquina</strong> e como entrar na primeira franquia de farm 3D do Brasil. 27 a 30 de abril. R$17,90 pra entrar."</p>
+      <div class="copy-header"><span class="copy-num">Copy 02</span><span class="copy-tag">Número</span></div>
+      <h3 class="copy-title">R$3k ou R$15k na mesma máquina</h3>
+      <p class="copy-script">"Patrick aqui. Duas pessoas, mesma impressora. Uma fatura R$3 mil no mês, a outra fatura R$15 mil. Mesma cidade, mesmo produto. A diferença tá <strong>no método de venda</strong> — e é isso que eu vou abrir pra vocês na noite 3. Dia 29, 20h, Zoom."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 03</span><span class="copy-tag">Minoria</span></div>
-      <h3 class="copy-title">Quem compra máquina e quem monta farm</h3>
-      <p class="copy-script">"Impressão 3D no Brasil tá explodindo. A maioria tá comprando impressora pra hobby. <strong>A minoria tá montando farm pra VENDER o que imprime</strong> — e fatura de 5 a 6 dígitos por mês. Nas 4 noites do desafio eu mostro como entrar nessa minoria. Dia 27."</p>
+      <div class="copy-header"><span class="copy-num">Copy 03</span><span class="copy-tag">Headline</span></div>
+      <h3 class="copy-title">R$5 mil/mês por impressora</h3>
+      <p class="copy-script">"Fala galera, Patrick aqui. A promessa da página é clara: <strong>cada impressora pode gerar mais de R$5 mil por mês</strong>. Vocês viram o número. Agora deixa eu te contar o segredo: não é a máquina que faz isso. É como você vende o que ela imprime. Noite 3 eu abro. Dia 29."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 04</span><span class="copy-tag">Time</span></div>
-      <h3 class="copy-title">5 especialistas, 4 verticais</h3>
-      <p class="copy-script">"O desafio reúne 5 especialistas em áreas diferentes: <strong>operação de farm, finanças, franquia, distribuição e vendas</strong>. Cada um abre a sua vertical. Você sai com uma visão completa do que é criar renda com impressão 3D. Dia 27 começa."</p>
+      <div class="copy-header"><span class="copy-num">Copy 04</span><span class="copy-tag">Roteiro</span></div>
+      <h3 class="copy-title">Mapa das 4 noites</h3>
+      <p class="copy-script">"Fala pessoal, Patrick aqui. Resumão das 4 noites: <strong>noite 1 o mercado, noite 2 a operação ao vivo, noite 3 eu abrindo o método de vendas, noite 4 uma oportunidade que pode virar seu ano</strong>. 27 a 30, sempre 20h. Bloqueia as 4 de uma vez, não dá pra perder nenhuma."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 05</span><span class="copy-tag">Virada</span></div>
-      <h3 class="copy-title">Mercado se abrindo agora</h3>
-      <p class="copy-script">"O que tá acontecendo em impressão 3D no Brasil agora não tá acontecendo em nenhum outro setor. <strong>Mercado se abrindo pra quem chegar primeiro com estrutura</strong>. 4 noites, 5 especialistas, um caminho claro. Dia 27."</p>
+      <div class="copy-header"><span class="copy-num">Copy 05</span><span class="copy-tag">Sorteio</span></div>
+      <h3 class="copy-title">Sorteio da Bambu A1 Mini</h3>
+      <p class="copy-script">"Fala galera. Um aviso importante: a gente vai <strong>sortear uma Bambu Lab A1 Mini</strong> entre vocês. Cada pessoa já entra com 1 ticket. Cada 2 amigos que você trouxer pro desafio, é +1 ticket. Chama quem você conhece que quer virar o jogo. Link de indicação tá fixado no grupo."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 06</span><span class="copy-tag">Método</span></div>
-      <h3 class="copy-title">Noite 3: método de vendas aberto</h3>
-      <p class="copy-script">"Adiantando: na noite 3 eu abro um <strong>método de vendas que fatura R$800 mil/mês numa distribuidora 3D</strong>. Planilha na tela, processo exposto. Se você vende qualquer coisa, essa noite vai mudar seu tíquete. Dia 29, no ar."</p>
+      <div class="copy-header"><span class="copy-num">Copy 06</span><span class="copy-tag">Urgência</span></div>
+      <h3 class="copy-title">Faturamento em 7 dias</h3>
+      <p class="copy-script">"Patrick aqui. A LP fala uma coisa séria: <strong>franqueados reportam o primeiro faturamento em 7 dias</strong>. Isso não é conto — é porque tem método por trás. E o método passa por saber vender. Na noite 3 eu abro esse método. Dia 29, 20h. Tô lá."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 07</span><span class="copy-tag">Convite</span></div>
-      <h3 class="copy-title">Pros mesmos números há 2 anos</h3>
-      <p class="copy-script">"Se você tá parado no mesmo salário, no mesmo negócio, <strong>nos mesmos números há 2 anos</strong> — esse desafio é pra você. 4 noites estudando como impressão 3D cria renda no Brasil. Dia 27 começa. Bloqueia a agenda."</p>
+      <div class="copy-header"><span class="copy-num">Copy 07</span><span class="copy-tag">Método</span></div>
+      <h3 class="copy-title">A diferença nunca é a máquina</h3>
+      <p class="copy-script">"Fala turma. Uma coisa que eu aprendi operando uma distribuidora de R$800 mil por mês: <strong>a diferença entre quem fatura pouco e quem fatura muito nunca é a máquina</strong>. É o método. Na noite 3 eu entrego o meu. O mesmo que roda todo dia aqui. Dia 29."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 08</span><span class="copy-tag">Transparência</span></div>
-      <h3 class="copy-title">Sem filtro, sem roteiro</h3>
-      <p class="copy-script">"4 noites, sem filtro, sem roteiro. <strong>DRE real, operação real, margem real, precificação real</strong>. Se você quer parar de empreender no chute e começar a decidir com número, dia 27 é seu dia. R$17,90."</p>
+      <div class="copy-header"><span class="copy-num">Copy 08</span><span class="copy-tag">Noite 4</span></div>
+      <h3 class="copy-title">A oportunidade da noite 4</h3>
+      <p class="copy-script">"Galera, Patrick aqui. Vou adiantar: na noite 4 a gente apresenta <strong>uma oportunidade que pode acelerar tudo</strong> que vocês aprenderem nas 3 noites anteriores. Não precisa aceitar. Mas precisa estar presente pra saber o que é. Bloqueia dia 30, 20h. Sério, bloqueia mesmo."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 09</span><span class="copy-tag">Vagas</span></div>
-      <h3 class="copy-title">20 vagas no final da noite 4</h3>
-      <p class="copy-script">"Aviso importante: no final da noite 4 abrem <strong>20 vagas</strong> pra primeira franquia de farm 3D do Brasil. Quem tá no desafio entra primeiro. As 4 noites são pra você entender se faz sentido — a decisão é sua. Dia 27 a 30."</p>
+      <div class="copy-header"><span class="copy-num">Copy 09</span><span class="copy-tag">Persona</span></div>
+      <h3 class="copy-title">Você sabe vender mesmo?</h3>
+      <p class="copy-script">"Fala pessoal. Pergunta honesta pra refletir nos próximos 5 dias: <strong>você sabe vender o seu produto?</strong> Muita gente acha que sabe, mas vende no impulso do cliente, não no próprio método. Na noite 3 eu viro essa chave pra vocês. Dia 29, 20h."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 10</span><span class="copy-tag">Custo</span></div>
-      <h3 class="copy-title">R$17,90 num negócio que cresce 20%/mês</h3>
-      <p class="copy-script">"R$17,90 pra 4 noites abrindo um negócio que cresce 20% ao mês. Quem ficar de fora vai olhar pros franqueados daqui a 12 meses e perguntar <strong>'por que eu não entrei?'</strong>. Dia 27, 21h. Link na descrição."</p>
+      <div class="copy-header"><span class="copy-num">Copy 10</span><span class="copy-tag">Convite</span></div>
+      <h3 class="copy-title">Chama o time inteiro</h3>
+      <p class="copy-script">"Patrick aqui. Se você tem alguém perto — esposa, marido, irmão, amigo — que tá querendo empreender, <strong>chama pro grupo agora</strong>. Vocês vivem a virada juntos, e você ainda ganha ticket extra no sorteio da Bambu. Link de indicação tá fixado. Bora mover."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
   </div>
 </section>
 
-<!-- ============ ALLYSON ============ -->
-<section class="section" id="allyson">
+<!-- ============ ALYSSON ============ -->
+<section class="section" id="alysson">
   <div class="socio-header">
     <div class="socio-avatar">AL</div>
     <div class="socio-info">
-      <h2>Allyson</h2>
-      <div class="socio-role">Operador de farm há 3 anos · 13 máquinas ativas</div>
+      <h2>Alysson</h2>
+      <div class="socio-role">Noite 02 · Montar, operar e escalar uma print farm</div>
       <p class="socio-bio">
-        O cara que mais entende de farm 3D operando no Brasil hoje. Começou com uma máquina em casa e virou dono de uma farm com 13 impressoras rodando 20 horas por dia.
-        Na noite 02 abre a farm ao vivo. Na noite 04 monta o setup ideal da primeira máquina do espectador.
+        Dono do <strong>@quasetudo3d</strong>. Começou com 1 impressora em casa e opera farm com 13 máquinas rodando 20h/dia. Na noite 2 abre a farm real ao vivo.
+        É a voz do "eu já fiz e funciona".
       </p>
       <div class="socio-duties">
-        <span class="duty">3 anos operando farm</span>
-        <span class="duty">13 máquinas rodando 20h/dia</span>
-        <span class="duty">65% de margem líquida</span>
+        <span class="duty">@quasetudo3d</span>
+        <span class="duty">Noite 02 · Dia 28 · 20h</span>
+        <span class="duty">Farm real na câmera</span>
       </div>
     </div>
   </div>
 
   <div class="copys-grid">
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 01</span><span class="copy-tag">Renda</span></div>
-      <h3 class="copy-title">R$11 mil por máquina, por mês</h3>
-      <p class="copy-script">"Uma impressora 3D. R$4 mil de investimento. <strong>R$11 mil de faturamento no primeiro mês</strong>. Eu tenho 13 rodando. Na noite 2 do desafio eu abro o setup completo pra sua primeira máquina se pagar em 90 dias. Dia 28, ao vivo."</p>
+      <div class="copy-header"><span class="copy-num">Copy 01</span><span class="copy-tag">Abertura</span></div>
+      <h3 class="copy-title">Farm real na câmera, dia 28</h3>
+      <p class="copy-script">"Fala galera, aqui é o Alysson do Quase Tudo 3D. Eu opero uma farm real há 3 anos. Na <strong>noite 2</strong> do desafio eu ligo a câmera dentro da minha farm e mostro pedido entrando, impressora rodando, produto saindo pela porta. Você vai ver uma operação de verdade na sua frente. Dia 28, 20h."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 02</span><span class="copy-tag">Trajetória</span></div>
-      <h3 class="copy-title">De 1 máquina em casa a 13 em escala</h3>
-      <p class="copy-script">"Há 3 anos eu comecei com <strong>UMA impressora dentro de casa</strong>. Hoje rodo 13, 20 horas por dia. A única diferença entre esses 2 momentos é aprendizado. Na noite 1 eu conto o caminho — o que faria igual, o que faria diferente. Dia 27."</p>
+      <div class="copy-header"><span class="copy-num">Copy 02</span><span class="copy-tag">R$5k/mês</span></div>
+      <h3 class="copy-title">R$5 mil por impressora, comprovado</h3>
+      <p class="copy-script">"E aí pessoal, Alysson aqui. A LP fala em <strong>R$5 mil por impressora, por mês</strong>. Eu confirmo — opero isso há 3 anos. 13 máquinas, cada uma virando mais de R$10 mil de faturamento e R$5 a R$7 mil de lucro. Na noite 2 eu abro como. Dia 28."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
       <div class="copy-header"><span class="copy-num">Copy 03</span><span class="copy-tag">Produto</span></div>
-      <h3 class="copy-title">O que imprimir é mais importante que a impressora</h3>
-      <p class="copy-script">"Todo mundo quer saber qual máquina comprar. Eu te digo: o problema NÃO é a máquina. <strong>É O QUE você imprime</strong>. Na noite 2 eu abro os 5 produtos que mais lucram na minha farm. Copia, cola e começa a faturar. Dia 28."</p>
+      <h3 class="copy-title">O que imprimir é o jogo inteiro</h3>
+      <p class="copy-script">"Fala galera. A pergunta não é 'qual impressora comprar'. A pergunta é <strong>O QUE IMPRIMIR pra ter margem</strong>. Na noite 2 eu abro os 5 produtos que mais lucram na minha farm hoje. Você copia, cola, começa. Dia 28, 20h, tô esperando."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
       <div class="copy-header"><span class="copy-num">Copy 04</span><span class="copy-tag">Margem</span></div>
-      <h3 class="copy-title">65% de margem líquida na farm</h3>
-      <p class="copy-script">"Te contaram que impressora 3D é lucro certo? Mentira. Tem custo de filamento, de falha, de pós-produção, de energia. <strong>Eu opero com 65% de margem líquida porque aprendi a gerenciar ISSO</strong>. Na noite 2 eu abro a conta. Dia 28."</p>
+      <h3 class="copy-title">Dragão articulado: 90% de margem</h3>
+      <p class="copy-script">"Alysson aqui. Exemplo real que tá na LP: o <strong>dragão articulado da Shopee</strong>. Sai em R$5 de filamento, vende por R$59. Isso é 90% de margem, galera. Eu opero com uma lista inteira de produtos nessa faixa. Na noite 2 eu abro a lista. Dia 28."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 05</span><span class="copy-tag">Payback</span></div>
-      <h3 class="copy-title">90 dias pra máquina se pagar</h3>
-      <p class="copy-script">"Uma máquina de R$4 mil <strong>paga ela mesma em 90 dias de operação real</strong>. Não é promessa — é matemática. Na noite 1 eu mostro como calcular seu payback antes de gastar o primeiro real. Você decide com número, não com empolgação. Dia 27."</p>
+      <div class="copy-header"><span class="copy-num">Copy 05</span><span class="copy-tag">História</span></div>
+      <h3 class="copy-title">Comecei com 1 máquina no quarto</h3>
+      <p class="copy-script">"Fala turma. Pra vocês terem uma ideia: eu comecei com <strong>UMA impressora dentro do meu quarto</strong>. Hoje tenho 13 num barracão, rodando 20 horas por dia. A distância entre esses 2 momentos é SÓ APRENDIZADO. Na noite 1 eu conto a história, na 2 eu mostro a prática. 27 e 28."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 06</span><span class="copy-tag">Ao vivo</span></div>
-      <h3 class="copy-title">Farm real, câmera aberta</h3>
-      <p class="copy-script">"Dia 28 eu ligo a câmera e mostro minha farm funcionando. <strong>Pedido entrando, fatiamento, produção, embalagem, expedição</strong>. Você vai ver uma operação real girando na sua frente. Não é curso — é farm. Te espero lá."</p>
+      <div class="copy-header"><span class="copy-num">Copy 06</span><span class="copy-tag">Tour</span></div>
+      <h3 class="copy-title">Sem corte, sem produção</h3>
+      <p class="copy-script">"E aí galera, Alysson aqui. Dia 28 eu ligo a câmera dentro da minha farm. <strong>Sem corte, sem produção</strong>. Você vai ver impressora rodando, produto sendo embalado, pedido saindo. A realidade crua da operação. 20h, tô lá."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 07</span><span class="copy-tag">Quebra</span></div>
-      <h3 class="copy-title">Não precisa ser engenheiro</h3>
-      <p class="copy-script">"Se você acha que precisa entender de engenharia pra operar impressora 3D, <strong>cai dessa cadeira</strong>. Eu sou operador técnico formado na prática. Se eu consegui sair de 1 pra 13 máquinas, você consegue sair de 0 pra 1. Dia 27."</p>
+      <div class="copy-header"><span class="copy-num">Copy 07</span><span class="copy-tag">Precificação</span></div>
+      <h3 class="copy-title">70% das farms quebram por um motivo só</h3>
+      <p class="copy-script">"Fala pessoal. 70% das farms 3D que abrem no Brasil fecham no primeiro ano. Um motivo só: <strong>o operador não sabe precificar o próprio produto</strong>. Na noite 2 eu abro minha tabela de preço — a mesma que roda há 3 anos. Dia 28, 20h."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 08</span><span class="copy-tag">Erro fatal</span></div>
-      <h3 class="copy-title">70% das farms fecham por um motivo só</h3>
-      <p class="copy-script">"70% das farms 3D que abrem no Brasil fecham no primeiro ano. Um erro só: <strong>não sabem precificar o que produzem</strong>. Na noite 2 eu abro minha tabela de preço — a mesma que roda há 3 anos. Copia e aplica. Dia 28."</p>
+      <div class="copy-header"><span class="copy-num">Copy 08</span><span class="copy-tag">Começo</span></div>
+      <h3 class="copy-title">1 máquina = R$3-8k/mês</h3>
+      <p class="copy-script">"Galera, quem tá achando que precisa de R$50 mil pra começar — para. Dá pra começar com <strong>UMA máquina dentro de casa</strong> e gerar R$3 a R$8 mil por mês, como tá na própria página. Eu fiz exatamente isso. Na noite 4 eu abro o setup ideal da primeira máquina. Dia 30."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 09</span><span class="copy-tag">Escala</span></div>
-      <h3 class="copy-title">De 13 pra 50 máquinas</h3>
-      <p class="copy-script">"Minha meta este ano é sair de 13 pra <strong>50 máquinas</strong>. Já sei o caminho porque vivi as 12 primeiras. Na noite 4 eu abro o plano de escala — cada decisão, cada erro evitado, cada contratação. Se você planeja escalar, essa noite é ouro. Dia 30."</p>
+      <div class="copy-header"><span class="copy-num">Copy 09</span><span class="copy-tag">Indicação</span></div>
+      <h3 class="copy-title">Pede pros amigos virem</h3>
+      <p class="copy-script">"Alysson aqui. Se você conhece alguém que quer <strong>sair do CLT, ter mais renda, parar de trabalhar pro chefe</strong> — chama pro grupo. Você ganha ticket no sorteio da Bambu A1 Mini, e ele entra numa onda contigo. Todo mundo sai ganhando, galera."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 10</span><span class="copy-tag">Degraus</span></div>
+      <div class="copy-header"><span class="copy-num">Copy 10</span><span class="copy-tag">Escala</span></div>
       <h3 class="copy-title">0, 1, 3, 7, 13</h3>
-      <p class="copy-script">"'Zero ao dez' pra mim não é metáfora. É <strong>0 máquina, 1, 3, 7, 13</strong>. Cada degrau teve uma lição diferente. Em 4 noites eu te entrego essas lições — e o caminho fica mais curto pra você do que foi pra mim. Dia 27. Bora?"</p>
-      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
-    </div>
-  </div>
-</section>
-
-<!-- ============ DANIEL ============ -->
-<section class="section" id="daniel">
-  <div class="socio-header">
-    <div class="socio-avatar">DB</div>
-    <div class="socio-info">
-      <h2>Daniel Braz</h2>
-      <div class="socio-role">O cara dos números · DRE, payback, caixa</div>
-      <p class="socio-bio">
-        Autoridade financeira do desafio. Abre DRE real, ensina a ler balanço de uma operação, mostra as 3 formas de fazer dinheiro com impressão 3D
-        e explica a diferença brutal entre quem cresce e quem quebra: matemática, não empolgação.
-      </p>
-      <div class="socio-duties">
-        <span class="duty">Noite 01 · 3 Caminhos de Renda</span>
-        <span class="duty">Noite 03 · DRE e Payback</span>
-        <span class="duty">Noite 04 · Rede vs. Solo</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="copys-grid">
-    <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 01</span><span class="copy-tag">Sobrevivência</span></div>
-      <h3 class="copy-title">90% quebram por causa de número</h3>
-      <p class="copy-script">"90% dos negócios pequenos quebram em 2 anos. O motivo? <strong>O dono não entende os próprios números</strong>. Na noite 3 eu abro um DRE completo de farm 3D, linha por linha. Você sai sabendo calcular o payback do SEU próximo investimento. Dia 29."</p>
-      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
-    </div>
-
-    <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 02</span><span class="copy-tag">Renda</span></div>
-      <h3 class="copy-title">3 formas de fazer dinheiro com 3D</h3>
-      <p class="copy-script">"Existem <strong>3 formas</strong> de fazer dinheiro com impressão 3D. 90% das pessoas só conhece uma. Na noite 1 eu abro os 3 caminhos — e qual faz mais sentido pra cada perfil. Investidor, operador, revendedor. Dia 27."</p>
-      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
-    </div>
-
-    <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 03</span><span class="copy-tag">Payback</span></div>
-      <h3 class="copy-title">3,1 meses pra se pagar</h3>
-      <p class="copy-script">"Uma impressora de R$4 mil <strong>se paga em 3,1 meses</strong>. Isso não é projeção — é DRE fechado. Na noite 3 eu abro cada linha: receita, custo variável, custo fixo, imposto, lucro. Você aprende a fazer a conta pra QUALQUER investimento. Dia 29."</p>
-      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
-    </div>
-
-    <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 04</span><span class="copy-tag">Decisão</span></div>
-      <h3 class="copy-title">Matemática, não fé</h3>
-      <p class="copy-script">"Gente entra em negócio por empolgação e perde dinheiro. <strong>Gente entra em negócio por matemática e escala</strong>. No desafio eu vou te ensinar a olhar pra qualquer oportunidade com lente de investidor. Dia 27 começa."</p>
-      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
-    </div>
-
-    <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 05</span><span class="copy-tag">Caixa</span></div>
-      <h3 class="copy-title">A diferença entre lucro e caixa</h3>
-      <p class="copy-script">"A diferença entre <strong>ter lucro e ter caixa</strong> é o que separa empresa que cresce de empresa que quebra. Na noite 3 eu explico essa diferença com exemplo real. Você sai com a cabeça calibrada pra decidir. Dia 29."</p>
-      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
-    </div>
-
-    <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 06</span><span class="copy-tag">Regra</span></div>
-      <h3 class="copy-title">Faturamento é vaidade. Caixa é realidade.</h3>
-      <p class="copy-script">"<strong>Faturamento é vaidade. Lucro é opinião. Caixa é realidade</strong>. Essa frase tem 30 anos e continua verdade. Na noite 3 eu te mostro qual número acompanhar toda semana. Se você acompanhar, não quebra. Dia 29."</p>
-      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
-    </div>
-
-    <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 07</span><span class="copy-tag">Rede</span></div>
-      <h3 class="copy-title">4x o resultado, mesmo trabalho</h3>
-      <p class="copy-script">"Um operador solo no mercado de impressão 3D fatura em média R$15 mil/mês. Um operador em rede fatura R$60-80 mil/mês. <strong>Mesmo trabalho — 4x o resultado</strong>. Na noite 4 eu mostro o porquê. Dia 30."</p>
-      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
-    </div>
-
-    <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 08</span><span class="copy-tag">Investimento</span></div>
-      <h3 class="copy-title">Aprenda a ler DRE antes de investir</h3>
-      <p class="copy-script">"Antes de colocar R$1 em qualquer negócio, <strong>aprende a ler DRE</strong>. Se você não entende DRE, você tá comprando no escuro. Na noite 3 eu ensino a ler DRE em 20 minutos — dá pra aplicar em farm 3D ou em qualquer empresa. Dia 29, aula aberta."</p>
-      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
-    </div>
-
-    <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 09</span><span class="copy-tag">Custo fixo</span></div>
-      <h3 class="copy-title">As 5 linhas que afundam farm</h3>
-      <p class="copy-script">"Todo mundo esquece do CUSTO FIXO. <strong>Aluguel, funcionário, energia, software, internet</strong>. Essas 5 linhas afundam farm 3D que não planeja. Na noite 3 eu te entrego uma planilha pra isso nunca te pegar. Dia 29."</p>
-      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
-    </div>
-
-    <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 10</span><span class="copy-tag">Compressão</span></div>
-      <h3 class="copy-title">4 anos de erro em 4 noites</h3>
-      <p class="copy-script">"Em 4 noites você aprende o que a maioria leva <strong>4 anos perdendo dinheiro</strong> pra aprender. Método, número, operação, estrutura. Dia 27 começa. Se você tá sério sobre empreender, tá no lugar certo."</p>
-      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ALAN ============ -->
-<section class="section" id="alan">
-  <div class="socio-header">
-    <div class="socio-avatar">AP</div>
-    <div class="socio-info">
-      <h2>Alan Parise</h2>
-      <div class="socio-role">Arquiteto de franquia · Precificação e modelos</div>
-      <p class="socio-bio">
-        Especialista em franchising. Estrutura modelos de franquia há anos — COF, contrato, academy, territórios, precificação, compliance.
-        Na noite 03 faz precificação estratégica ao vivo. Na noite 04 apresenta o modelo completo de franquia de farm 3D.
-      </p>
-      <div class="socio-duties">
-        <span class="duty">Franchising e modelos</span>
-        <span class="duty">Precificação estratégica</span>
-        <span class="duty">COF · Academy · Suporte</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="copys-grid">
-    <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 01</span><span class="copy-tag">Atalho</span></div>
-      <h3 class="copy-title">Queima 3 anos de erro</h3>
-      <p class="copy-script">"Quando você abre um negócio do zero, <strong>gasta 3 anos aprendendo o que não fazer</strong>. Quando entra numa franquia estruturada, queima esses 3 anos. O tempo que você economiza É dinheiro. Na noite 4 eu abro a conta. Dia 30."</p>
-      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
-    </div>
-
-    <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 02</span><span class="copy-tag">Mercado</span></div>
-      <h3 class="copy-title">R$270 bilhões em franchising</h3>
-      <p class="copy-script">"<strong>Franchising movimentou R$270 bilhões no Brasil em 2025</strong>. E impressão 3D virou o segmento mais promissor pra franquia nos próximos 5 anos. Quem entrar agora pega o topo da onda. Dia 27 começa o desafio."</p>
-      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
-    </div>
-
-    <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 03</span><span class="copy-tag">Precificação</span></div>
-      <h3 class="copy-title">Precificação ao vivo</h3>
-      <p class="copy-script">"Na noite 3 eu faço <strong>precificação estratégica AO VIVO</strong>. Pego um produto de impressão 3D e mostro 3 formas de precificar — e qual gera 40% mais lucro. Se você vende qualquer coisa, essa noite muda seu tíquete. Dia 29."</p>
-      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
-    </div>
-
-    <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 04</span><span class="copy-tag">Kit</span></div>
-      <h3 class="copy-title">O que o franqueado recebe no dia 1</h3>
-      <p class="copy-script">"O que o franqueado NexFarm recebe dia 1: <strong>13 máquinas, estoque de filamento, manual operacional, Academy de 26 módulos, mentoria ao vivo, território exclusivo</strong>. Na noite 4 eu abro cada item. Dia 30."</p>
-      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
-    </div>
-
-    <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 05</span><span class="copy-tag">Lucro</span></div>
-      <h3 class="copy-title">R$5 mil ou R$15 mil pela mesma máquina</h3>
-      <p class="copy-script">"Dois operadores com a mesma máquina, mesma cidade, mesmo produto. Um fatura R$5 mil. O outro R$15 mil. Diferença? <strong>Precificação</strong>. Na noite 3 eu ensino a regra dos 4 multiplicadores. Dia 29."</p>
-      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
-    </div>
-
-    <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 06</span><span class="copy-tag">Proteção</span></div>
-      <h3 class="copy-title">Franquia sem COF é golpe</h3>
-      <p class="copy-script">"<strong>Franquia sem COF, contrato e compliance não é franquia — é golpe</strong>. A NexFarm segue a Lei 13.966 à risca porque franqueado desprotegido vira cliente que processa. Na noite 4 eu abro o jurídico todo. Dia 30."</p>
-      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
-    </div>
-
-    <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 07</span><span class="copy-tag">Primeiros</span></div>
-      <h3 class="copy-title">As 20 primeiras constroem a marca</h3>
-      <p class="copy-script">"<strong>As 20 primeiras franquias constroem a marca</strong>. Por isso têm preço de entrada diferente das próximas 200. Se você tá pensando em entrar, é agora ou nunca mais com esse valor. Dia 30, vagas abertas."</p>
-      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
-    </div>
-
-    <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 08</span><span class="copy-tag">Royalty</span></div>
-      <h3 class="copy-title">Matriz trabalhando pelo franqueado</h3>
-      <p class="copy-script">"Franquia só faz sentido se a matriz <strong>trabalha PELO franqueado</strong>. Marketing, suporte técnico, atualização de produto, território protegido. Na noite 4 eu mostro o que a NexFarm entrega em troca do royalty. Dia 30."</p>
-      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
-    </div>
-
-    <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 09</span><span class="copy-tag">Cidade</span></div>
-      <h3 class="copy-title">Funciona em qualquer porte</h3>
-      <p class="copy-script">"Farm 3D funciona em capital, interior, cidade pequena. <strong>Diferença é só volume — o modelo é o mesmo</strong>. Na noite 4 eu mostro faturamento projetado por porte de cidade. Dia 30. Cabe no seu mapa."</p>
-      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
-    </div>
-
-    <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 10</span><span class="copy-tag">Regra</span></div>
-      <h3 class="copy-title">10x mais faturamento pros primeiros</h3>
-      <p class="copy-script">"Nos próximos 5 anos, 1000 franquias de farm 3D vão ser vendidas no Brasil. <strong>As 100 primeiras vão ter 10x mais faturamento</strong> que as últimas 900. Regra do quem chega primeiro. Dia 27 começa."</p>
+      <p class="copy-script">"Fala galera. 'Zero ao dez' pra mim não é metáfora — é <strong>0, 1, 3, 7, 13 máquinas</strong>. Cada degrau teve uma lição diferente, gastei muito dinheiro aprendendo. Nas 4 noites do desafio eu entrego essas lições de graça. O caminho fica bem mais curto pra você. 27 a 30, 20h."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
   </div>
@@ -571,87 +342,271 @@ h1, h2, h3, h4, .display {
     <div class="socio-avatar">TG</div>
     <div class="socio-info">
       <h2>Tiago (Tiagão)</h2>
-      <div class="socio-role">Operação e distribuição · Processo e margem</div>
+      <div class="socio-role">Noite 02 · O que comprar, o que evitar</div>
       <p class="socio-bio">
-        Opera distribuidora de impressão 3D que fatura R$800 mil/mês. Expert em importação direta, estoque, logística e processo operacional.
-        Na noite 02 abre o workflow completo — pedido entrando até produto saindo. Na noite 04 mostra a cadeia de abastecimento do franqueado.
+        Opera farm no dia a dia. Na noite 02 entrega a lista de <strong>o que vale comprar e o que EVITAR</strong>: máquina, filamento, software, fornecedor.
+        Quem já gastou errado vai se identificar; quem tá começando vai economizar um monte.
       </p>
       <div class="socio-duties">
-        <span class="duty">R$800k/mês de distribuição</span>
-        <span class="duty">12% margem líquida</span>
-        <span class="duty">Importação direta</span>
+        <span class="duty">Lista do que comprar</span>
+        <span class="duty">Lista negra de fornecedor</span>
+        <span class="duty">Noite 02 · Dia 28 · 20h</span>
       </div>
     </div>
   </div>
 
   <div class="copys-grid">
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 01</span><span class="copy-tag">Margem</span></div>
-      <h3 class="copy-title">Margem se ganha nos detalhes</h3>
-      <p class="copy-script">"Impressão 3D tem margem pequena quando você opera no chute. Tem <strong>40% quando você opera no processo</strong>. Na noite 2 eu mostro os 7 pontos onde se ganha margem. Dia 28."</p>
+      <div class="copy-header"><span class="copy-num">Copy 01</span><span class="copy-tag">Abertura</span></div>
+      <h3 class="copy-title">O que comprar, o que evitar</h3>
+      <p class="copy-script">"Fala galera, aqui é o Tiagão. Eu opero farm 3D no dia a dia e tenho uma tarefa pra você nas 4 noites: <strong>curar a sua compra</strong>. O que vale, o que NÃO vale, qual fornecedor confiar, qual fugir. Na noite 2 eu entrego essa lista pronta. Dia 28, 20h."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 02</span><span class="copy-tag">Filamento</span></div>
-      <h3 class="copy-title">Economizar R$20 e perder R$200</h3>
-      <p class="copy-script">"Filamento ruim entope cabeçote, falha impressão, gera retrabalho. O operador que economiza R$20 no filamento <strong>perde R$200 em horas de máquina parada</strong>. Na noite 2 eu mostro a curva certa. Dia 28."</p>
+      <div class="copy-header"><span class="copy-num">Copy 02</span><span class="copy-tag">Economia</span></div>
+      <h3 class="copy-title">R$20 economizados, R$200 perdidos</h3>
+      <p class="copy-script">"Tiago aqui. Filamento ruim entope cabeçote, falha impressão, gera retrabalho. <strong>O cara que economiza R$20 no filamento perde R$200 em máquina parada</strong>. Na noite 2 eu abro a curva certa. Você sai sabendo qual filamento vale e qual não vale. Dia 28."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 03</span><span class="copy-tag">Importação</span></div>
+      <div class="copy-header"><span class="copy-num">Copy 03</span><span class="copy-tag">Custo</span></div>
+      <h3 class="copy-title">Máquina parada é dinheiro queimando</h3>
+      <p class="copy-script">"Fala pessoal, Tiago aqui. <strong>Uma impressora parada 24h custa R$370 em custo-oportunidade</strong>. 10 máquinas paradas um dia? R$3.700 queimados — assim, sem barulho. Na noite 2 eu abro o protocolo que a gente usa pra rodar 24/7. Dia 28, 20h."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 04</span><span class="copy-tag">Fornecedor</span></div>
+      <h3 class="copy-title">3 fornecedores que importam</h3>
+      <p class="copy-script">"Tiago aqui. Se você quer operar 3D no Brasil, tem <strong>3 fornecedores que fazem diferença</strong>. Um de máquina, um de filamento, um de software. Eu trabalho com esses 3 há 3 anos. Na noite 2 eu entrego a lista sem enrolação. Dia 28."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 05</span><span class="copy-tag">Import</span></div>
       <h3 class="copy-title">Direto da China</h3>
-      <p class="copy-script">"Eu negocio direto com fabricante na China <strong>há 3 anos</strong>. Aprendi que no Brasil a diferença entre pagar caro e pagar barato é uma viagem. Na noite 2 eu abro os contatos e o processo. Dia 28."</p>
+      <p class="copy-script">"Fala turma. Eu negocio <strong>direto com fabricante na China há 3 anos</strong>. A diferença entre pagar caro e pagar barato no Brasil é uma viagem e uns contatos certos. Na noite 2 eu abro o processo — do porto até a sua garagem. Dia 28, 20h."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 04</span><span class="copy-tag">Oportunidade</span></div>
-      <h3 class="copy-title">Custo-oportunidade da máquina parada</h3>
-      <p class="copy-script">"Uma impressora parada 24h custa R$370 em custo-oportunidade. <strong>Uma farm com 10 máquinas paradas 24h perde R$3.700 num dia</strong>. Na noite 2 eu mostro o protocolo de operação 24/7. Dia 28."</p>
+      <div class="copy-header"><span class="copy-num">Copy 06</span><span class="copy-tag">Evitar</span></div>
+      <h3 class="copy-title">Lista negra de fornecedor</h3>
+      <p class="copy-script">"Tiago aqui. Mais importante do que saber o que comprar é saber <strong>O QUE EVITAR</strong>. Máquina que quebra, fornecedor que some, software que trava, filamento que falha. Na noite 2 eu entrego a lista negra também. É a parte que ninguém te conta. Dia 28."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 05</span><span class="copy-tag">Workflow</span></div>
+      <div class="copy-header"><span class="copy-num">Copy 07</span><span class="copy-tag">Workflow</span></div>
       <h3 class="copy-title">48h ou 15 dias. Processo decide.</h3>
-      <p class="copy-script">"Uma farm 3D boa transforma pedido em produto entregue em <strong>48h</strong>. Uma farm ruim demora 15 dias. Processo certo é o diferencial que vira cliente recorrente. Na noite 2 eu abro nosso workflow completo. Dia 28."</p>
+      <p class="copy-script">"Galera, Tiago aqui. <strong>Farm boa entrega pedido em 48h. Farm ruim demora 15 dias</strong> e perde cliente pra sempre. Processo certo é o que separa quem fideliza de quem fica reclamando no grupo. Na noite 2 eu abro nosso workflow inteiro. Dia 28."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 06</span><span class="copy-tag">Capital</span></div>
+      <div class="copy-header"><span class="copy-num">Copy 08</span><span class="copy-tag">Estoque</span></div>
       <h3 class="copy-title">Estoque parado é capital morto</h3>
-      <p class="copy-script">"<strong>Estoque de filamento parado é capital morto</strong>. Na noite 2 eu mostro o cálculo de estoque mínimo pra farm de 10 máquinas. Dinheiro menos parado, giro mais rápido, margem maior. Dia 28."</p>
+      <p class="copy-script">"Fala pessoal. <strong>Estoque de filamento parado é capital morto</strong>. Na noite 2 eu mostro o cálculo de estoque mínimo pra farm de 10 máquinas. Menos dinheiro parado, giro mais rápido, margem maior. É matemática, não achismo. Dia 28, 20h."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 07</span><span class="copy-tag">Rede</span></div>
-      <h3 class="copy-title">3 fornecedores que todo operador precisa</h3>
-      <p class="copy-script">"Se você quer operar impressão 3D no Brasil, tem <strong>3 fornecedores que fazem diferença</strong>. Um de máquina, um de filamento, um de software. Na noite 2 eu entrego a lista. Dia 28."</p>
+      <div class="copy-header"><span class="copy-num">Copy 09</span><span class="copy-tag">Margem</span></div>
+      <h3 class="copy-title">40% de margem no processo</h3>
+      <p class="copy-script">"Tiago aqui. Farm no chute tem margem pequena. <strong>Farm no processo tem 40% de margem</strong>. Na noite 2 eu abro os 7 pontos onde se ganha ou se perde margem — cada ponto vale dinheiro na sua conta no fim do mês. Dia 28, 20h."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 08</span><span class="copy-tag">Abertura</span></div>
-      <h3 class="copy-title">Abro a caixa na noite 4</h3>
-      <p class="copy-script">"Na noite 4 eu <strong>abro a caixa</strong>. Literalmente. 13 máquinas, filamento, acessórios, manual, software, suporte. Cada item, preço, fornecedor. Transparência total do que o franqueado recebe. Dia 30."</p>
+      <div class="copy-header"><span class="copy-num">Copy 10</span><span class="copy-tag">Transparência</span></div>
+      <h3 class="copy-title">Na noite 4 eu abro a caixa</h3>
+      <p class="copy-script">"Fala galera. Na noite 4 eu <strong>abro a caixa do franqueado NexFarm</strong>. Literalmente. Máquinas, filamento, software, manual, suporte. Cada item, preço, fornecedor. Transparência total pra você decidir com informação. Dia 30, 20h."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DANIEL ============ -->
+<section class="section" id="daniel">
+  <div class="socio-header">
+    <div class="socio-avatar">DB</div>
+    <div class="socio-info">
+      <h2>Daniel Braz</h2>
+      <div class="socio-role">Estrutura a operação pra crescer</div>
+      <p class="socio-bio">
+        "Mostra como estruturar a operação pra crescer" — é como a LP descreve. Daniel é o cara que te faz sair de 1 máquina pra 10 sem quebrar no caminho.
+        DRE, caixa, payback, decisões que separam quem escala de quem trava na 3ª máquina.
+      </p>
+      <div class="socio-duties">
+        <span class="duty">Estrutura pra escala</span>
+        <span class="duty">Payback e DRE</span>
+        <span class="duty">3 caminhos de renda</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="copys-grid">
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 01</span><span class="copy-tag">Abertura</span></div>
+      <h3 class="copy-title">Estruturar a operação pra crescer</h3>
+      <p class="copy-script">"Fala galera, aqui é o Daniel Braz. No desafio eu vou te ensinar a <strong>estruturar a operação pra CRESCER</strong>. Porque começar é fácil — difícil é sair de 1 máquina pra 10 sem quebrar no caminho. Tem gente que trava na 3ª. Eu mostro onde, e como passar. 27 a 30, 20h."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 09</span><span class="copy-tag">Distribuidora</span></div>
-      <h3 class="copy-title">R$96 mil de lucro por mês</h3>
-      <p class="copy-script">"A distribuidora de 3D que eu opero fatura R$800 mil/mês com 12% de margem líquida. <strong>Isso é R$96 mil de lucro mensal</strong>. Na noite 2 eu abro a estrutura de custo linha por linha. Dia 28."</p>
+      <div class="copy-header"><span class="copy-num">Copy 02</span><span class="copy-tag">Escala</span></div>
+      <h3 class="copy-title">De 1 pra 10 máquinas</h3>
+      <p class="copy-script">"Daniel aqui. Sair de 1 impressora pra 10 não é 10x de trabalho — é 3x, se você estruturar certo. <strong>Mas a maioria das farms trava na 3ª máquina</strong> porque faz tudo na mão. Na noite eu mostro o ponto exato de virada — e como atravessar. 20h em ponto."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 10</span><span class="copy-tag">Cadeia</span></div>
-      <h3 class="copy-title">Do porto à expedição</h3>
-      <p class="copy-script">"<strong>Do porto de Itajaí à expedição na casa do cliente</strong> — eu operei cada ponto dessa cadeia. Na noite 2 eu mapeio o caminho inteiro. Se você quer importar ou revender 3D, essa noite é pra você. Dia 28."</p>
+      <div class="copy-header"><span class="copy-num">Copy 03</span><span class="copy-tag">3 caminhos</span></div>
+      <h3 class="copy-title">3 formas de fazer dinheiro com 3D</h3>
+      <p class="copy-script">"Fala turma, Daniel aqui. <strong>3 caminhos pra ganhar com impressão 3D</strong>: renda extra (R$3-8k com 1-2 máquinas), negócio de casa (R$8-15k com 4-8), escala (R$25-100k+ com múltiplas farms). 90% das pessoas só enxerga o primeiro. Na noite 1 eu abro os 3. Dia 27, 20h."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 04</span><span class="copy-tag">Payback</span></div>
+      <h3 class="copy-title">Payback real, conta fechada</h3>
+      <p class="copy-script">"Daniel aqui. <strong>Uma impressora de R$4 mil se paga em cerca de 3 meses</strong> de operação real. Isso não é projeção otimista — é DRE fechado. Na noite 3 eu abro cada linha: receita, custo variável, custo fixo, imposto, lucro. Você sai sabendo calcular pra qualquer investimento. Dia 29."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 05</span><span class="copy-tag">Sobrevivência</span></div>
+      <h3 class="copy-title">90% quebram por causa de número</h3>
+      <p class="copy-script">"Fala pessoal, Daniel aqui. <strong>90% dos negócios pequenos quebram em 2 anos</strong>. Motivo? O dono não entende os próprios números. Nas noites do desafio eu vou te entregar a cabeça de um operador que sabe ler caixa — e parar de trabalhar pra pagar conta. 27 a 30."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 06</span><span class="copy-tag">Renda de casa</span></div>
+      <h3 class="copy-title">R$8 a 15 mil operando de casa</h3>
+      <p class="copy-script">"Daniel aqui. A LP fala em <strong>R$8 a 15 mil por mês operando de casa</strong>, com 4-8 máquinas. O número é real, mas exige estrutura. Na noite eu abro como chegar lá sem matar caixa no caminho. Essa conta muita gente faz errado — e quebra. 20h em ponto."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 07</span><span class="copy-tag">Custo fixo</span></div>
+      <h3 class="copy-title">As 5 linhas que afundam farm</h3>
+      <p class="copy-script">"Fala galera. 5 linhas afundam farm que não planeja: <strong>aluguel, funcionário, energia, software, internet</strong>. Quem não calcula, vê o caixa sumir sem entender por quê. No desafio eu entrego uma planilha pra essas 5 linhas nunca te pegarem de surpresa."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 08</span><span class="copy-tag">Decisão</span></div>
+      <h3 class="copy-title">Matemática vence empolgação</h3>
+      <p class="copy-script">"Daniel aqui. Gente entra em negócio por empolgação e quebra. <strong>Gente entra por matemática e escala</strong>. No desafio eu vou calibrar a cabeça de vocês pra decidir com número, não com vontade. É a diferença entre patrimônio e promessa. 27 a 30, 20h."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 09</span><span class="copy-tag">Rede</span></div>
+      <h3 class="copy-title">4x o resultado, mesmo trabalho</h3>
+      <p class="copy-script">"Fala turma. <strong>Operador solo no mercado de 3D fatura em média R$15 mil/mês. Operador em rede fatura R$60-80 mil</strong>. Mesma máquina, mesmo tempo — 4x o resultado. Na noite 4 eu explico como a rede entrega essa diferença. Dia 30, 20h."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 10</span><span class="copy-tag">Prazo</span></div>
+      <h3 class="copy-title">Primeiro faturamento em 7 dias</h3>
+      <p class="copy-script">"Daniel aqui. A LP fala que franqueados <strong>reportam primeiro faturamento em 7 dias</strong>. É verdade — mas só porque tem estrutura por trás. Nas 4 noites eu abro essa estrutura. Sem segredo, sem mágica. Método. 27 a 30, 20h. Bloqueia."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ALAN ============ -->
+<section class="section" id="alan">
+  <div class="socio-header">
+    <div class="socio-avatar">AP</div>
+    <div class="socio-info">
+      <h2>Alan Parise</h2>
+      <div class="socio-role">Noite 04 · O que faz franquia funcionar e o que mata</div>
+      <p class="socio-bio">
+        "Explica o que faz uma franquia funcionar e o que mata." Alan é o cara que estrutura modelos há anos — COF, contrato, academy, suporte, território.
+        Na noite 4 abre TODO o modelo NexFarm pra o pessoal decidir com informação, não com vontade.
+      </p>
+      <div class="socio-duties">
+        <span class="duty">Modelo de franquia</span>
+        <span class="duty">Precificação</span>
+        <span class="duty">Noite 04 · Dia 30 · 20h</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="copys-grid">
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 01</span><span class="copy-tag">Abertura</span></div>
+      <h3 class="copy-title">O que faz franquia funcionar. E o que mata.</h3>
+      <p class="copy-script">"Fala galera, Alan Parise aqui. Minha praia é franquia. Eu estruturo modelos há anos. Na <strong>noite 4</strong> do desafio eu vou te mostrar O QUE FAZ uma franquia funcionar E O QUE MATA uma franquia. Vai ser pra você decidir com cabeça, não com vontade. Dia 30, 20h."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 02</span><span class="copy-tag">Atalho</span></div>
+      <h3 class="copy-title">3 anos de erro, queimados</h3>
+      <p class="copy-script">"Alan aqui. Quem abre negócio sozinho gasta <strong>3 anos aprendendo o que não fazer</strong>. Quem entra numa franquia estruturada, queima esses 3 anos. O tempo que você economiza É dinheiro. Na noite 4 eu abro essa conta pra vocês. Dia 30, 20h."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 03</span><span class="copy-tag">Preço</span></div>
+      <h3 class="copy-title">Precificação ao vivo</h3>
+      <p class="copy-script">"Fala pessoal. Uma coisa que muita gente pede é <strong>precificação AO VIVO</strong>. Vou fazer. Pego um produto de 3D, mostro 3 formas diferentes de precificar — e qual delas entrega 40% a mais de lucro. Se você vende qualquer coisa, isso muda o seu mês. Dia 29."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 04</span><span class="copy-tag">Proteção</span></div>
+      <h3 class="copy-title">Franquia sem COF é golpe</h3>
+      <p class="copy-script">"Alan aqui. Vou falar direto: <strong>franquia sem COF, sem contrato, sem compliance — não é franquia, é golpe</strong>. A NexFarm segue a Lei 13.966 à risca. Na noite 4 eu abro o jurídico todo pra vocês entenderem no que tão entrando. Proteção pra vida toda. Dia 30."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 05</span><span class="copy-tag">Margem</span></div>
+      <h3 class="copy-title">80-90% de margem nos nichos certos</h3>
+      <p class="copy-script">"Fala turma. A LP fala em <strong>80 a 90% de margem nos nichos de 3D</strong>. Não é conto do vigário — é matemática de quem escolhe nicho certo. Shopee, Mercado Livre, TikTok Shop. Na noite 3 eu te ensino a ler qual nicho vale pra você. Dia 29, 20h."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 06</span><span class="copy-tag">O que mata</span></div>
+      <h3 class="copy-title">O que mata uma franquia</h3>
+      <p class="copy-script">"Alan aqui. Franquia <strong>morre quando a franqueadora não entrega</strong>: sem suporte, sem marketing, sem território protegido, sem atualização de produto. Na noite 4 eu mostro TODO o suporte que a NexFarm entrega — e cada um olha, compara, decide. Dia 30."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 07</span><span class="copy-tag">Precificação</span></div>
+      <h3 class="copy-title">R$5k ou R$15k com a mesma máquina</h3>
+      <p class="copy-script">"Fala galera, Alan aqui. <strong>Dois operadores, mesma máquina, mesma cidade, mesmo produto</strong>. Um fatura R$5 mil. O outro fatura R$15 mil. Diferença? Precificação. Na noite 3 eu viro essa chave pra você. Dia 29, 20h em ponto."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 08</span><span class="copy-tag">Cidade</span></div>
+      <h3 class="copy-title">Funciona em qualquer cidade</h3>
+      <p class="copy-script">"Alan aqui. Farm 3D funciona em <strong>capital, interior, cidade de 30 mil habitantes</strong>. Muda só o volume — o modelo é o mesmo. Na noite 4 eu mostro faturamento projetado por porte de cidade, pra você saber se CABE no seu mapa. Dia 30, 20h."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 09</span><span class="copy-tag">Primeiros</span></div>
+      <h3 class="copy-title">Chega primeiro, fatura mais</h3>
+      <p class="copy-script">"Fala pessoal. Nos próximos 5 anos vão abrir <strong>1000 franquias de farm 3D no Brasil</strong>. As 100 primeiras vão faturar 10x mais que as últimas 900. É regra de quem chega primeiro, sempre foi. Nas 4 noites a gente abre esse racional. 27 a 30."</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 10</span><span class="copy-tag">Sorteio</span></div>
+      <h3 class="copy-title">Sorteio Bambu A1 Mini</h3>
+      <p class="copy-script">"Alan aqui, aviso importante pra galera: a cada <strong>2 amigos que você indicar pro desafio, você ganha +1 ticket</strong> no sorteio da Bambu Lab A1 Mini. Quem indicar mais, tem mais chance de levar uma máquina de graça pra casa. Link de indicação fixado. Chama o time."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
   </div>
@@ -663,15 +618,15 @@ h1, h2, h3, h4, .display {
     <div class="socio-avatar">AS</div>
     <div class="socio-info">
       <h2>Alisson Ademicon</h2>
-      <div class="socio-role">Engajamento do grupo · Enquetes e indicação</div>
+      <div class="socio-role">Engajamento · Enquete · Indicação · Sorteio</div>
       <p class="socio-bio">
-        Mantém o grupo quente na contagem regressiva. Conduz enquetes, imagens, lembretes, ranking de indicação.
-        Não abre conteúdo dos especialistas — abre o movimento do grupo.
+        Mantém o grupo vivo e se mexendo. Enquetes, imagens, lembretes, ranking de indicação, sorteio da Bambu A1 Mini.
+        Não tem noite pra entregar — tem grupo pra movimentar até as 20h do dia 27.
       </p>
       <div class="socio-duties">
         <span class="duty">Enquetes diárias</span>
         <span class="duty">Ranking de indicação</span>
-        <span class="duty">Contagem regressiva</span>
+        <span class="duty">Sorteio Bambu</span>
       </div>
     </div>
   </div>
@@ -679,71 +634,71 @@ h1, h2, h3, h4, .display {
   <div class="copys-grid">
     <div class="copy-card">
       <div class="copy-header"><span class="copy-num">Copy 01</span><span class="copy-tag">Enquete</span></div>
-      <h3 class="copy-title">O que mais te trava hoje?</h3>
-      <p class="copy-script">"Bora esquentar o grupo. Responde aqui: <strong>qual é a maior trava no seu negócio ou na sua carreira hoje?</strong> Dinheiro, tempo, conhecimento, oportunidade? A resposta da maioria vai pro ar na noite 1. Dia 27 começa."</p>
+      <h3 class="copy-title">Qual sua maior trava hoje?</h3>
+      <p class="copy-script">"Fala galera, Alisson aqui. 5 dias pra começar. Bora esquentar. Responde aqui embaixo: <strong>qual é a maior trava no seu negócio hoje?</strong> Dinheiro, tempo, conhecimento, coragem? A resposta da maioria vai pro ar na noite 1. Dia 27, 20h."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 02</span><span class="copy-tag">Indicação</span></div>
+      <div class="copy-header"><span class="copy-num">Copy 02</span><span class="copy-tag">Sorteio</span></div>
+      <h3 class="copy-title">Sorteio da Bambu A1 Mini</h3>
+      <p class="copy-script">"Alisson aqui. Detalhe importante pra não deixar passar: a gente vai <strong>sortear uma Bambu Lab A1 Mini</strong> entre vocês. Cada um já entra com 1 ticket. Cada 2 amigos que você indicar, é +1 ticket. Link de indicação fixado no grupo. Bora subir o número de tickets?"</p>
+      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
+    </div>
+
+    <div class="copy-card">
+      <div class="copy-header"><span class="copy-num">Copy 03</span><span class="copy-tag">Indicação</span></div>
       <h3 class="copy-title">Pensa em 1 pessoa</h3>
-      <p class="copy-script">"<strong>Pensa em 1 pessoa da sua vida</strong> que você sabe que tá precisando de uma virada. Pega o link de indicação, manda pra ela. Se ela entrar, é teu abraço na consciência. Link no tópico do grupo."</p>
+      <p class="copy-script">"Galera, Alisson aqui. Pensa numa <strong>única pessoa da sua vida que tá precisando de uma virada</strong>. Amigo, cunhado, irmão, vizinho. Pega o link de indicação, manda pra ela. Você ganha ticket, ela ganha um desafio que pode mudar o ano. Todo mundo sai ganhando."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 03</span><span class="copy-tag">Check</span></div>
-      <h3 class="copy-title">Quanto do seu 2026 já rodou?</h3>
-      <p class="copy-script">"Pergunta séria: <strong>do seu plano de 2026, quanto você já executou? 0%, 25%, 50%?</strong> Responde aqui. As 4 noites do desafio são pra quem ficou preso em 'ainda não'. Dia 27 começa."</p>
+      <div class="copy-header"><span class="copy-num">Copy 04</span><span class="copy-tag">Confirmação</span></div>
+      <h3 class="copy-title">Quem tá dentro pras 4 noites?</h3>
+      <p class="copy-script">"Fala turma. Alisson aqui. Me responde: <strong>quem já tá 100% confirmado pras 4 noites seguidas?</strong> Reage com fogo aqui embaixo. A gente tá fazendo uma lista VIP pra esse pessoal — acesso diferenciado durante o desafio. 27 a 30, 20h às 22h."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 04</span><span class="copy-tag">Agenda</span></div>
+      <div class="copy-header"><span class="copy-num">Copy 05</span><span class="copy-tag">Agenda</span></div>
       <h3 class="copy-title">Salva o cronograma</h3>
-      <p class="copy-script">"Acabei de postar o cronograma das 4 noites no tópico. <strong>Salva no print, bloqueia a agenda</strong>. 27, 28, 29, 30 de abril. Perder uma noite é perder 1/4 do desafio."</p>
-      <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
-    </div>
-
-    <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 05</span><span class="copy-tag">Ranking</span></div>
-      <h3 class="copy-title">Ranking de indicação aberto</h3>
-      <p class="copy-script">"O ranking de quem indicou mais gente pro desafio tá aberto. <strong>Os 3 primeiros vão ter acesso antecipado ao conteúdo das noites</strong>. Link de indicação tá fixado. Bora subir no ranking?"</p>
+      <p class="copy-script">"Alisson aqui. Acabei de fixar o cronograma completo no tópico do grupo. <strong>4 noites, 4 temas, 4 horários. 27, 28, 29, 30 — sempre das 20h às 22h</strong>. Salva no print, bloqueia a agenda. Perder uma noite é perder 25% do desafio."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
       <div class="copy-header"><span class="copy-num">Copy 06</span><span class="copy-tag">Pergunta</span></div>
-      <h3 class="copy-title">Sua pergunta ao vivo</h3>
-      <p class="copy-script">"Se você pudesse fazer <strong>UMA pergunta</strong> aos especialistas nas noites ao vivo, qual seria? Solta aqui embaixo. Vou levar as 10 mais votadas pra eles responderem ao vivo. Sua pergunta, no ar."</p>
+      <h3 class="copy-title">Sua pergunta, no ar</h3>
+      <p class="copy-script">"Fala pessoal. Se você pudesse fazer <strong>UMA pergunta aos especialistas ao vivo</strong>, qual seria? Solta aqui embaixo. As 10 mais curtidas eu levo pros caras responderem ao vivo durante as noites. Sua pergunta, em cena."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 07</span><span class="copy-tag">Confirmados</span></div>
-      <h3 class="copy-title">Quem tá 100% dentro?</h3>
-      <p class="copy-script">"Conta pra mim: <strong>quem já tá 100% dentro pras 4 noites?</strong> Reage com emoji de fogo. A gente tá criando uma lista VIP pra esse pessoal — acesso diferenciado durante o desafio."</p>
+      <div class="copy-header"><span class="copy-num">Copy 07</span><span class="copy-tag">Ranking</span></div>
+      <h3 class="copy-title">Ranking de indicação</h3>
+      <p class="copy-script">"Alisson aqui. O <strong>ranking de indicação tá aberto</strong>. Os 3 primeiros colocados ganham acesso antecipado ao conteúdo das noites. Os primeiros lugares agora tão com 5 indicações cada. Dá pra passar, bora? Link fixado no grupo."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
       <div class="copy-header"><span class="copy-num">Copy 08</span><span class="copy-tag">Dado</span></div>
       <h3 class="copy-title">7 em cada 10 decidem algo</h3>
-      <p class="copy-script">"Dado real: <strong>de cada 10 pessoas que entram no desafio, 7 tomam uma decisão concreta</strong> que muda os próximos 12 meses. Você tá entre os 7? Dia 27 começa."</p>
+      <p class="copy-script">"Fala galera. Dado real: <strong>de cada 10 pessoas que fazem um desafio desse porte, 7 tomam uma decisão concreta</strong> que muda os 12 meses seguintes. Pergunta é: você vai tá entre os 7 ou entre os 3? 27 a 30, 20h."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 09</span><span class="copy-tag">Convite</span></div>
-      <h3 class="copy-title">Quem precisa ouvir isso</h3>
-      <p class="copy-script">"Pensa no <strong>amigo que reclama do trabalho há 3 anos</strong>. No cunhado que quer abrir negócio mas não sabe qual. No vizinho que tá parado. Manda o link do desafio pra eles. Dia 27 começa."</p>
+      <div class="copy-header"><span class="copy-num">Copy 09</span><span class="copy-tag">Garantia</span></div>
+      <h3 class="copy-title">R$17,90 e 7 dias de garantia</h3>
+      <p class="copy-script">"Alisson aqui. Lembrete pra quem ainda tá em dúvida se chama amigo: o desafio custa <strong>R$17,90 e tem 7 dias de garantia incondicional</strong>. Se não valer, devolvem. Risco zero. Chama seus amigos sem medo."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
 
     <div class="copy-card">
-      <div class="copy-header"><span class="copy-num">Copy 10</span><span class="copy-tag">Avisos</span></div>
+      <div class="copy-header"><span class="copy-num">Copy 10</span><span class="copy-tag">Notificação</span></div>
       <h3 class="copy-title">Liga a notificação do grupo</h3>
-      <p class="copy-script">"Até dia 27 vou tá aqui: <strong>enquete todo dia, imagem dos bastidores, lembrete das noites</strong>. Liga a notificação do grupo e fica de olho. O desafio começa na sua tela às 21h do dia 27."</p>
+      <p class="copy-script">"Fala turma. Até dia 27 eu vou tá aqui todo dia: <strong>enquete, imagem dos bastidores, lembrete das noites</strong>. Liga a notificação do grupo pra não perder nada. O desafio começa na sua tela às 20h do dia 27. Te vejo lá."</p>
       <button class="copy-btn" onclick="copyText(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar roteiro</button>
     </div>
   </div>
@@ -751,9 +706,9 @@ h1, h2, h3, h4, .display {
 
 <section class="footer">
   <div class="footer-content">
-    <h3>Cada um protagonista da sua vertical.</h3>
-    <p>60 roteiros com foco em criação de renda. Cada especialista fala da sua autoridade — operação, finanças, franquia, distribuição, engajamento. O espectador sai sabendo COMO ganhar dinheiro com impressão 3D.</p>
-    <div class="footer-tag">NexFarm 3D · Desafio Zero a Dez · 27-30 Abril 2026</div>
+    <h3>300 pessoas esperando. 4 noites pra entregar.</h3>
+    <p>Cada especialista no protagonismo da própria entrega. Foco em presença nas 4 noites + indicação pro sorteio da Bambu A1 Mini. Tom de grupo de WhatsApp — direto, sem filtro, com a promessa concreta da noite de cada um.</p>
+    <div class="footer-tag">NexFarm 3D · Desafio Zero a Dez · 27-30 Abril · 20h às 22h</div>
   </div>
 </section>
 
